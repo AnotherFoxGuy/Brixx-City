@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EStaticObjects</name>
+    <events>
+        <variable constant="0" name="RandomNumber" sid="4163690159853403" static="0" type="number">0</variable>
+        <event-block sid="3017583109436482">
+            <conditions>
+                <condition id="-18" name="On created" sid="2548545829668149" type="House" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6782582944033804" type="System">
+                    <param id="0" name="Variable">RandomNumber</param>
+                    <param id="1" name="Value">floor(random(AmountNames))</param>
+                </action>
+                <action id="-10" name="Add to" sid="6821707021108958" type="System">
+                    <param id="0" name="Variable">MaxSpawnAmount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="7147283594022239" type="House">
+                    <param id="0" name="Animation">Dictionary.Get(Objselector.SelectedText)&#x0D;&#x0A;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Add key" sid="1457317468573047" type="Dictionary">
+                    <param id="0" name="Key">str(House.UID)</param>
+                    <param id="1" name="Value">Dictionary.Get(&quot;NameID&quot;&amp;RandomNumber)&amp;&quot;&apos;s House&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="7126144927963949" type="Dictionary">
+                    <param id="0" name="Key">&quot;CitizenName&quot;&amp;str(House.UID)</param>
+                    <param id="1" name="Value">Dictionary.Get(&quot;NameID&quot;&amp;RandomNumber)</param>
+                </action>
+                <action id="0" name="Add key" sid="3202823963698466" type="Dictionary">
+                    <param id="0" name="Key">&quot;OBJname&quot;&amp;str(House.UID)</param>
+                    <param id="1" name="Value">Dictionary.Get(Objselector.SelectedText)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4559466310413655">
+            <conditions>
+                <condition behavior="DragDrop" id="0" name="Is dragging" sid="6874235637362566" type="House" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="6604299491723685" type="House">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action id="-24" name="Move to top" sid="1275942490620357" type="House" />
+            </actions>
+        </event-block>
+        <event-block sid="1176148053470133">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="5148992536783918" type="House" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="4635393138895669" type="House">
+                    <param id="0" name="X">round(House.X/DIVIS)*DIVIS</param>
+                    <param id="1" name="Y">round(House.Y/DIVIS)*DIVIS</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="2142662221444837" type="House">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3520737232275632">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="1476153229396089" type="House" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="8284677799078854" type="System">
+                    <param id="0" name="Variable">MaxSpawnAmount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1874493879783966">
+            <conditions>
+                <condition id="-18" name="On created" sid="120799173633334" type="WorkPlace" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4644794990482634" type="WorkPlace">
+                    <param id="0" name="Animation">Dictionary.Get(Objselector.SelectedText)&#x0D;&#x0A;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Add key" sid="1641564992557552" type="Dictionary">
+                    <param id="0" name="Key">str(WorkPlace.UID)</param>
+                    <param id="1" name="Value">Objselector.SelectedText</param>
+                </action>
+                <action id="0" name="Add key" sid="3171246899448241" type="Dictionary">
+                    <param id="0" name="Key">&quot;OBJname&quot;&amp;str(WorkPlace.UID)</param>
+                    <param id="1" name="Value">Dictionary.Get(Objselector.SelectedText)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5283155916916896">
+            <conditions>
+                <condition behavior="DragDrop" id="0" name="Is dragging" sid="3899987043763788" type="WorkPlace" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="6086035102977226" type="WorkPlace">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8567638341647672">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="6973445536342585" type="WorkPlace" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="9620132532894261" type="WorkPlace">
+                    <param id="0" name="X">round(WorkPlace.X/DIVIS)*DIVIS</param>
+                    <param id="1" name="Y">round(WorkPlace.Y/DIVIS)*DIVIS</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="3201668963549581" type="WorkPlace">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7400485061048326">
+            <conditions>
+                <condition id="-18" name="On created" sid="7637558318313211" type="ExtraBuilding" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9840899030921387" type="ExtraBuilding">
+                    <param id="0" name="Animation">Dictionary.Get(Objselector.SelectedText)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Add key" sid="2570735684032851" type="Dictionary">
+                    <param id="0" name="Key">str(ExtraBuilding.UID)</param>
+                    <param id="1" name="Value">Objselector.SelectedText</param>
+                </action>
+                <action id="0" name="Add key" sid="7234897969403326" type="Dictionary">
+                    <param id="0" name="Key">&quot;OBJname&quot;&amp;str(ExtraBuilding.UID)</param>
+                    <param id="1" name="Value">Dictionary.Get(Objselector.SelectedText)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6608996132762956">
+            <conditions>
+                <condition behavior="DragDrop" id="0" name="Is dragging" sid="5939794359076712" type="ExtraBuilding" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="6194459276798139" type="ExtraBuilding">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7759511318255319">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="8679791463928325" type="ExtraBuilding" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="886846141104989" type="ExtraBuilding">
+                    <param id="0" name="X">round(ExtraBuilding.X/DIVIS)*DIVIS</param>
+                    <param id="1" name="Y">round(ExtraBuilding.Y/DIVIS)*DIVIS</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="7292537876624393" type="ExtraBuilding">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

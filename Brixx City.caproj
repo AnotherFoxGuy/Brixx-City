@@ -1,0 +1,947 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Brixx City</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>59jlnhzfyyw0</unique-id>
+    <saved-with-version>17800</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="NodeWebkit" version="1">Node-Webkit</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="XML" version="1">XML</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>5000</width>
+        <height>2500</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">High quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Scale outer</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Percentage text</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Internet Explorer</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder expanded="1">
+        <object-folder expanded="1" name="StaticObjects">
+            <object-type name="ExtraBuilding" sid="719311968373502">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DestroyOutsideLayout" sid="2233139480025765">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="DragDrop" sid="9588629256866506">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="101" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2350347142378073" speed="24">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0000.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0001.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0002.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0003.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0004.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0005.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0006.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0007.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0008.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0009.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0010.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0011.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0012.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0013.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0014.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0015.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0016.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0017.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0018.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0019.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0020.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0021.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0022.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0023.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0024.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0025.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0026.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0027.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0028.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0029.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0030.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0031.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0032.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0033.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0034.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0035.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0036.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0037.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0038.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0039.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0040.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0041.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0042.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0043.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0044.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0045.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0046.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0047.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0048.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0049.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0050.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0051.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0052.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0053.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0054.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0055.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0056.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0057.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0058.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0059.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0060.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0061.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0062.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0063.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0064.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0065.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0066.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0067.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0068.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0069.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0070.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0071.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0072.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0073.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0074.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0075.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0076.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0077.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0078.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0079.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0080.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0081.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0082.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0083.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0084.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0085.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0086.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0087.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0088.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0089.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0090.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0091.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0092.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0093.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0094.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0095.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0096.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0097.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0098.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0099.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0100.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="House" sid="5911128224644626">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DestroyOutsideLayout" sid="4239885324159036">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="DragDrop" sid="4511239368389256">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="HouseVar0" pingpong="0" repeatcount="1" repeatto="0" sid="3888176184448314" speed="5">
+                        <frame duration="1" hotspotX="0.500673" hotspotY="1" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\House.png">
+                            <image-point name="Imagepoint 1" x="0.500673" y="0" />
+                            <image-point name="Imagepoint 2" x="0.500673" y="1.28993" />
+                            <collision-poly>
+                                <point x="0.479139" y="0.516785" />
+                                <point x="0.479139" y="0.282808" />
+                                <point x="0.966353" y="0.282808" />
+                                <point x="0.966353" y="1" />
+                                <point x="0.00269179" y="0.997965" />
+                                <point x="0.00403768" y="0.517803" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="HouseVar1" pingpong="0" repeatcount="1" repeatto="0" sid="2191469489883757" speed="5">
+                        <frame duration="1" hotspotX="0.501018" hotspotY="1" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\bungalow.lcd.png">
+                            <image-point name="Imagepoint 1" x="0.501018" y="0" />
+                            <image-point name="Imagepoint 2" x="0.501018" y="1.28926" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="HouseVar2" pingpong="0" repeatcount="1" repeatto="0" sid="3998440521458425" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\House2.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                            <image-point name="Imagepoint 2" x="0.5" y="1.28986" />
+                            <collision-poly>
+                                <point x="0.460474" y="0.00724638" />
+                                <point x="0.539526" y="0.00724638" />
+                                <point x="0.996047" y="0.0797101" />
+                                <point x="0.994071" y="0.985507" />
+                                <point x="0.00592885" y="0.985507" />
+                                <point x="0.00395257" y="0.0797101" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WorkPlace" sid="9088749031122514">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DestroyOutsideLayout" sid="1069582451456348">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="DragDrop" sid="5754690004227025">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9673993552845891" speed="5">
+                        <frame duration="1" hotspotX="0.501109" hotspotY="1" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\factory.png">
+                            <image-point name="Imagepoint 1" x="0.501109" y="0" />
+                            <image-point name="Imagepoint 2" x="0.501109" y="0" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="DynamicObjects">
+            <object-type name="Car" sid="4382848072455536">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="failedToFindPath" sid="6399273921052317" type="boolean" />
+                    <instance-variable name="TimesFailedToFindPath" sid="2839423433734615" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pathfinding" sid="8581988830794936">
+                        <behavior id="Pathfinding" />
+                    </behavior-type>
+                    <behavior-type name="DragDrop" sid="5817419975266834">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="D" pingpong="0" repeatcount="1" repeatto="0" sid="8029106127053605" speed="5">
+                        <frame duration="1" hotspotX="1.40845" hotspotY="1" original-source="C:\tmp\0000.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="R" pingpong="0" repeatcount="1" repeatto="0" sid="3196996660972895" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0001.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="L" pingpong="0" repeatcount="1" repeatto="0" sid="9548107304067686" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0003.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="U" pingpong="0" repeatcount="1" repeatto="0" sid="7981199743255062" speed="5">
+                        <frame duration="1" hotspotX="-0.704225" hotspotY="1" original-source="C:\tmp\0002.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Citizen" sid="885233165637283">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="failedToFindPath" sid="7592924226350472" type="boolean" />
+                    <instance-variable name="TimesFailedToFindPath" sid="1731495232932557" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pathfinding" sid="1989293800943213">
+                        <behavior id="Pathfinding" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="9918063144946794">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="DragDrop" sid="5892523758782295">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="21" loop="0" name="Ang" pingpong="0" repeatcount="1" repeatto="0" sid="8556674447400742" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0080.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0081.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0082.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0083.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0084.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0085.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0086.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0087.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0088.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0089.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0090.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0091.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0092.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0093.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0094.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0095.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0096.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0097.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0098.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0099.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0100.png" />
+                    </animation>
+                    <animation framecount="20" loop="1" name="R" pingpong="0" repeatcount="1" repeatto="0" sid="658578611087223" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0019.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0020.png" />
+                        <frame duration="1" hotspotX="0.505747" hotspotY="1" original-source="C:\tmp\0021.png" />
+                        <frame duration="1" hotspotX="0.506494" hotspotY="1" original-source="C:\tmp\0022.png" />
+                        <frame duration="1" hotspotX="0.508197" hotspotY="1" original-source="C:\tmp\0023.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0024.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0025.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0026.png" />
+                        <frame duration="1" hotspotX="0.506329" hotspotY="1" original-source="C:\tmp\0027.png" />
+                        <frame duration="1" hotspotX="0.506024" hotspotY="1" original-source="C:\tmp\0028.png" />
+                        <frame duration="1" hotspotX="0.505882" hotspotY="1" original-source="C:\tmp\0029.png" />
+                        <frame duration="1" hotspotX="0.506024" hotspotY="1" original-source="C:\tmp\0030.png" />
+                        <frame duration="1" hotspotX="0.506329" hotspotY="1" original-source="C:\tmp\0031.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0032.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0033.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0034.png" />
+                        <frame duration="1" hotspotX="0.508197" hotspotY="1" original-source="C:\tmp\0035.png" />
+                        <frame duration="1" hotspotX="0.506494" hotspotY="1" original-source="C:\tmp\0036.png" />
+                        <frame duration="1" hotspotX="0.505747" hotspotY="1" original-source="C:\tmp\0037.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0038.png" />
+                    </animation>
+                    <animation framecount="20" loop="1" name="L" pingpong="0" repeatcount="1" repeatto="0" sid="2010863235739415" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0060.png" />
+                        <frame duration="1" hotspotX="0.505376" hotspotY="1" original-source="C:\tmp\0061.png" />
+                        <frame duration="1" hotspotX="0.505747" hotspotY="1" original-source="C:\tmp\0062.png" />
+                        <frame duration="1" hotspotX="0.506494" hotspotY="1" original-source="C:\tmp\0063.png" />
+                        <frame duration="1" hotspotX="0.508197" hotspotY="1" original-source="C:\tmp\0064.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0065.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0066.png" />
+                        <frame duration="1" hotspotX="0.507246" hotspotY="1" original-source="C:\tmp\0067.png" />
+                        <frame duration="1" hotspotX="0.506329" hotspotY="1" original-source="C:\tmp\0068.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0069.png" />
+                        <frame duration="1" hotspotX="0.505882" hotspotY="1" original-source="C:\tmp\0070.png" />
+                        <frame duration="1" hotspotX="0.506024" hotspotY="1" original-source="C:\tmp\0071.png" />
+                        <frame duration="1" hotspotX="0.506329" hotspotY="1" original-source="C:\tmp\0072.png" />
+                        <frame duration="1" hotspotX="0.507246" hotspotY="1" original-source="C:\tmp\0073.png" />
+                        <frame duration="1" hotspotX="0.508772" hotspotY="1" original-source="C:\tmp\0074.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0075.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0076.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0077.png" />
+                        <frame duration="1" hotspotX="0.505618" hotspotY="1" original-source="C:\tmp\0078.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0079.png" />
+                    </animation>
+                    <animation framecount="19" loop="1" name="U" pingpong="0" repeatcount="1" repeatto="0" sid="5069822221181009" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0002.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0003.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0004.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0005.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0006.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0007.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0008.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0009.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0010.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0011.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0012.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0013.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0014.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0015.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0016.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0017.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0018.png" />
+                    </animation>
+                    <animation framecount="21" loop="1" name="D" pingpong="0" repeatcount="1" repeatto="0" sid="1132651373294467" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0039.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0040.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0041.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0042.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0043.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0044.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0045.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0046.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0047.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0048.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0049.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0050.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0051.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0052.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0053.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0054.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0055.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0056.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0057.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0058.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0059.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="Storage">
+            <object-type global="1" name="Dictionary" sid="893043297037444">
+                <plugin id="Dictionary" />
+            </object-type>
+            <object-type name="LoadButton" sid="8192467439330039">
+                <plugin id="Button" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="6049863024614355">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="SaveButton" sid="5113541704087092">
+                <plugin id="Button" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="1734489693239004">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="NodeWebkit" sid="9887514484161729">
+                <plugin id="NodeWebkit" />
+            </object-type>
+            <object-type name="TextBoxText" sid="7892517675113062">
+                <plugin id="TextBox" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="4722718591835665">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Objselector" sid="2127425989379845">
+                <plugin id="List" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="6597415590329087">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type global="1" name="XML" sid="4455669172773269">
+                <plugin id="XML" />
+            </object-type>
+            <object-type name="AJAX" sid="4162206606324034">
+                <plugin id="AJAX" />
+            </object-type>
+        </object-folder>
+        <object-type name="Mouse" sid="6384923785544072">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Keyboard" sid="6412930323312636">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Arrow" sid="5279971954538506">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7064104533417954" speed="5">
+                    <frame duration="1" hotspotX="0.49226" hotspotY="0.939" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\TMP\untitled.png">
+                        <collision-poly>
+                            <point x="0" y="0.555" />
+                            <point x="1" y="0.555" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FakeCursor" sid="7642845780726617">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="9659074563791577">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6957668562181498" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ErrorText" sid="8266136746665515">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Tilemap" sid="1797736586586201">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="4990353456522566">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\tile.png" />
+            <tiles>
+                <tile id="1">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="1" y="0" />
+                        <point x="1" y="1" />
+                        <point x="1" y="0" />
+                    </collision-poly>
+                </tile>
+                <tile id="2">
+                    <collision-poly>
+                        <point x="0" y="1" />
+                        <point x="1" y="1" />
+                        <point x="1" y="1" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="3">
+                    <collision-poly>
+                        <point x="1" y="0" />
+                        <point x="1" y="0" />
+                        <point x="1" y="1" />
+                        <point x="1" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="4">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="1" y="0" />
+                        <point x="1" y="0" />
+                        <point x="0" y="0" />
+                    </collision-poly>
+                </tile>
+                <tile id="5">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="0" y="0.00917431" />
+                        <point x="0" y="1" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="6">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="0" y="0" />
+                        <point x="0" y="0" />
+                        <point x="0" y="0" />
+                    </collision-poly>
+                </tile>
+                <tile id="7">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="0" y="0" />
+                        <point x="0" y="1" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="8">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="1" y="0" />
+                        <point x="1" y="0" />
+                        <point x="0" y="0" />
+                    </collision-poly>
+                </tile>
+                <tile id="9">
+                    <collision-poly>
+                        <point x="1" y="1" />
+                        <point x="1" y="0" />
+                        <point x="1" y="1" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="10">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="0" y="1" />
+                        <point x="1" y="1" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="11">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="1" y="0" />
+                        <point x="0" y="0" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+            </tiles>
+        </object-type>
+        <object-type name="ToolBox" sid="583100063783597">
+            <plugin id="NinePatch" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="6147304453524375">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+                <behavior-type name="NoSave" sid="507136832862803">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\Users\sietze\Documents\MEGA\Construct 2\tests\TB.png" />
+        </object-type>
+        <object-type name="ToolBoxPreview" sid="8103141490875521">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Animation5" pingpong="0" repeatcount="1" repeatto="0" sid="1433633067502286" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Bungalow" pingpong="0" repeatcount="1" repeatto="0" sid="7873538198402408" speed="5">
+                    <frame duration="1" hotspotX="0.501018" hotspotY="0.344353" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\bungalow.lcd.png">
+                        <collision-poly>
+                            <point x="0.293279" y="0.0633609" />
+                            <point x="0.708758" y="0.0633609" />
+                            <point x="0.995927" y="0.344353" />
+                            <point x="0.98167" y="0.99449" />
+                            <point x="0.0203666" y="0.99449" />
+                            <point x="0.00203666" y="0.344353" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="4894412418187843" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\factory.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.476563" />
+                            <point x="0.925781" y="0.0742188" />
+                            <point x="0.925781" y="0.5" />
+                            <point x="0.785156" y="0.785156" />
+                            <point x="0.5" y="0.962891" />
+                            <point x="0.0507813" y="0.949219" />
+                            <point x="0.0507813" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Animation3" pingpong="0" repeatcount="1" repeatto="0" sid="9714216030284735" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\House.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.5" />
+                            <point x="0.5" y="0.148438" />
+                            <point x="0.837891" y="0.162109" />
+                            <point x="0.849609" y="0.849609" />
+                            <point x="0.5" y="0.990234" />
+                            <point x="0.150391" y="0.849609" />
+                            <point x="0.394531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Animation4" pingpong="0" repeatcount="1" repeatto="0" sid="1622911276425659" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\House2.png">
+                        <collision-poly>
+                            <point x="0.460938" y="0.460938" />
+                            <point x="0.539063" y="0.460938" />
+                            <point x="0.990234" y="0.5" />
+                            <point x="0.988281" y="0.988281" />
+                            <point x="0.0117188" y="0.988281" />
+                            <point x="0.00976563" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FakeCursormove" sid="3845252961672662">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="1963314910788067">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="5387376909915279">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="2498621071018037">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9091935906675016" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="DynamicObjects" plugin-id="Sprite" sid="4472858150845631">
+            <members>
+                <member>Car</member>
+                <member>Citizen</member>
+            </members>
+        </family>
+        <family name="StaticObjects" plugin-id="Sprite" sid="7225951619120642">
+            <members>
+                <member>ExtraBuilding</member>
+                <member>House</member>
+                <member>WorkPlace</member>
+            </members>
+        </family>
+        <family name="Objects" plugin-id="Sprite" sid="7496804549206326">
+            <members>
+                <member>Car</member>
+                <member>Citizen</member>
+                <member>ExtraBuilding</member>
+                <member>House</member>
+                <member>WorkPlace</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder expanded="1">
+        <layout>Main.xml</layout>
+    </layout-folder>
+    <event-folder expanded="1">
+        <event-sheet>EMain.xml</event-sheet>
+        <event-sheet>ECar.xml</event-sheet>
+        <event-sheet>ECitizen.xml</event-sheet>
+        <event-sheet>EStaticObjects.xml</event-sheet>
+        <event-sheet>EData.xml</event-sheet>
+        <event-sheet>EArrow.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="3" />
+        <global-instance type="AJAX" uid="12" />
+        <global-instance type="NodeWebkit" uid="6" />
+        <global-instance type="Keyboard" uid="20" />
+    </global-instances>
+    <sounds-folder expanded="1" />
+    <music-folder expanded="1" />
+    <files-folder expanded="1">
+        <file-folder expanded="0" name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="Variations_Old.xml" />
+        <file name="Dictionary.xml" />
+    </files-folder>
+</c2project>

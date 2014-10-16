@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EArrow</name>
+    <events>
+        <event-block sid="220660611105553">
+            <conditions>
+                <condition id="-33" name="Pick by comparison" sid="4517926520698712" type="System">
+                    <param id="0" name="Object">Objects</param>
+                    <param id="1" name="Expression">LastUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Objects.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="4202454075701756" type="Arrow">
+                    <param id="0" name="X">Objects.X</param>
+                    <param id="1" name="Y">Objects.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5925546902118957">
+            <conditions>
+                <condition id="1" name="On any click" sid="3561310982092376" type="Mouse" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4501093494913009">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="2065417981560633" type="Mouse">
+                            <param id="0" name="Object">Objects</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="9240471346370857" type="Arrow">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7121146782154543" type="System">
+                            <param id="0" name="Variable">LastUID</param>
+                            <param id="1" name="Value">Objects.UID</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="5286625027716954" type="TextBoxText">
+                            <param id="0" name="Text">Dictionary.Get(str(LastUID))</param>
+                        </action>
+                        <action id="10" name="Load image from URL" sid="7329310237765576" type="ToolBoxPreview">
+                            <param id="0" name="URI">Dictionary.Get(&quot;DataURI&quot;&amp;Dictionary.Get(&quot;OBJname&quot;&amp;str(LastUID)))</param>
+                            <param id="1" name="Size">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="704511778652393" type="TextBoxText">
+                            <param id="0" name="Text">Dictionary.Get(&quot;DataURI&quot;&amp;Dictionary.Get(&quot;OBJname&quot;&amp;str(LastUID)))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6638260910899895">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8112736441607107" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1510241996435757" type="Arrow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5768008372758096" type="TextBoxText">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EData</name>
+    <events>
+        <variable constant="0" name="AmountNames" sid="5569411946828151" static="0" type="number">0</variable>
+        <variable constant="0" name="NameID" sid="281685971786681" static="0" type="number">0</variable>
+        <event-block sid="9426515604293519">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5490651254103585" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="1016365680630953" type="AJAX">
+                    <param id="0" name="Tag">&quot;Dictionary.xml&quot;</param>
+                    <param id="1" name="File">Dictionary.xml</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9434990707312832">
+            <conditions>
+                <condition id="0" name="On completed" sid="4886287519205174" type="AJAX">
+                    <param id="0" name="Tag">&quot;Dictionary.xml&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="2420099819635856" type="XML">
+                    <param id="0" name="XML">AJAX.LastData</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9148590414465333">
+                    <conditions>
+                        <condition id="0" name="For each node" sid="2028097699537515" type="XML">
+                            <param id="0" name="XPath">&quot;/Dictionary/HouseVariations/House&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Add item" sid="2026272354852219" type="Objselector">
+                            <param id="0" name="Text">XML.StringValue(&quot;HouseName/text()&quot;)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="4908532830709459" type="System">
+                            <param id="0" name="Variable">HouseNames</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;HouseName/text()&quot;)&amp;newline</param>
+                        </action>
+                        <action id="0" name="Add key" sid="1895775672998225" type="Dictionary">
+                            <param id="0" name="Key">XML.StringValue(&quot;HouseName/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;HouseFile/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="2354794490370965" type="Dictionary">
+                            <param id="0" name="Key">XML.StringValue(&quot;HouseFile/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;HouseDataURI/text()&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2253347358250258">
+                    <conditions>
+                        <condition id="0" name="For each node" sid="5146450010618863" type="XML">
+                            <param id="0" name="XPath">&quot;/Dictionary/WorkPlaceVariations/WorkPlace&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Add item" sid="5376043497822319" type="Objselector">
+                            <param id="0" name="Text">XML.StringValue(&quot;WorkPlaceName/text()&quot;)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="5739612987011834" type="System">
+                            <param id="0" name="Variable">WorkPlaceNames</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WorkPlaceName/text()&quot;)&amp;newline</param>
+                        </action>
+                        <action id="0" name="Add key" sid="6953085180256868" type="Dictionary">
+                            <param id="0" name="Key">XML.StringValue(&quot;WorkPlaceName/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WorkPlaceFile/text()&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8647911384132118">
+                    <conditions>
+                        <condition id="0" name="For each node" sid="7397482402213474" type="XML">
+                            <param id="0" name="XPath">&quot;/Dictionary/ExtraBuildingVariations/ExtraBuilding&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Add item" sid="1236218621863175" type="Objselector">
+                            <param id="0" name="Text">XML.StringValue(&quot;ExtraBuildingName/text()&quot;)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="2205610794513408" type="System">
+                            <param id="0" name="Variable">ExtraBuildingNames</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;ExtraBuildingName/text()&quot;)&amp;newline</param>
+                        </action>
+                        <action id="0" name="Add key" sid="2104098236353256" type="Dictionary">
+                            <param id="0" name="Key">XML.StringValue(&quot;ExtraBuildingName/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;ExtraBuildingFile/text()&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3564161230537096">
+                    <conditions>
+                        <condition id="0" name="For each node" sid="432162324564427" type="XML">
+                            <param id="0" name="XPath">&quot;/Dictionary/CitizenNames/Name&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="131882439548828" type="Dictionary">
+                            <param id="0" name="Key">&quot;NameID&quot;&amp;NameID</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;text()&quot;)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="8883337982184789" type="System">
+                            <param id="0" name="Variable">AmountNames</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="8210899780152744" type="System">
+                            <param id="0" name="Variable">NameID</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="65983764101386">
+            <conditions>
+                <condition id="1" name="On text changed" sid="1900731223116508" type="TextBoxText" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set key" sid="7075405096787844" type="Dictionary">
+                    <param id="0" name="Key">str(LastUID)</param>
+                    <param id="1" name="Value">TextBoxText.Text</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

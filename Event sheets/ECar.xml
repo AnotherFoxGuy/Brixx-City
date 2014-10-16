@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ECar</name>
+    <events>
+        <event-block sid="6974459409456566">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9063118437702798" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="2146803499350684" type="Car">
+                    <param id="0" name="Obstacle">Tilemap</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3854522317532623">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="3677952880323262" type="System">
+                    <param id="0" name="First value">AmountofCarsSpawnt</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">MaxSpawnAmount</param>
+                </condition>
+                <condition id="-16" name="Pick random instance" sid="8557752189236304" type="System">
+                    <param id="0" name="Object">House</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="7653008877349881" type="System">
+                    <param id="0" name="Interval (seconds)">20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="2671545104440726" type="House">
+                    <param id="0" name="Object">Car</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1048519515088876">
+            <conditions>
+                <condition id="-18" name="On created" sid="4375650502158659" type="Car" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="7431097441355451" type="System">
+                    <param id="0" name="Variable">AmountofCarsSpawnt</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4206112677761591">
+                    <conditions>
+                        <condition id="-16" name="Pick random instance" sid="2239253444797374" type="System">
+                            <param id="0" name="Object">WorkPlace</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="7305517871046108" type="System">
+                            <param id="0" name="First value">random(2)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="9665497108224728" type="Car">
+                            <param id="0" name="X">WorkPlace.X</param>
+                            <param id="1" name="Y">WorkPlace.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8408538503421326">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3193549582374739" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="452900573432498" type="Car">
+                            <param id="0" name="X">random(1708)</param>
+                            <param id="1" name="Y">random(960)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6694914446894025">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="6712633106689704" type="Car" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="7122088339446177" type="Car" />
+            </actions>
+        </event-block>
+        <event-block sid="4204987410187773">
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" sid="4673035652489952" type="Car" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1150043831022188" type="Car" />
+            </actions>
+        </event-block>
+        <event-block sid="7869631411230449">
+            <conditions>
+                <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="6089616102585914" type="Car" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="8207900060698445" type="Car">
+                    <param id="0" name="Instance variable">failedToFindPath</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="239877717631071" type="Car">
+                    <param id="0" name="Instance variable">TimesFailedToFindPath</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="115285640409543">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="7282341004207686" type="Car" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="1474406961449347" type="System">
+                    <param id="0" name="Variable">AmountofCarsSpawnt</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7335969536084173">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4061885921583079" type="System" />
+                <condition id="-11" name="For Each" sid="7878316746445756" type="System">
+                    <param id="0" name="Object">Car</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8591606788527667">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="7238667809287376" type="System">
+                            <param id="0" name="Value">floor(Car.Pathfinding.MovingAngle)</param>
+                            <param id="1" name="Lower bound">-45</param>
+                            <param id="2" name="Upper bound">45</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="447019922636371" type="Car">
+                            <param id="0" name="Animation">&quot;R&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4175652422216109">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="1955722618721966" type="System">
+                            <param id="0" name="Value">floor(Car.Pathfinding.MovingAngle)</param>
+                            <param id="1" name="Lower bound">45</param>
+                            <param id="2" name="Upper bound">135</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7172562712369455" type="Car">
+                            <param id="0" name="Animation">&quot;D&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2170107464865242">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="8185089947989552" type="System">
+                            <param id="0" name="Value">floor(Car.Pathfinding.MovingAngle)</param>
+                            <param id="1" name="Lower bound">135</param>
+                            <param id="2" name="Upper bound">225</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2002868438062218" type="Car">
+                            <param id="0" name="Animation">&quot;L&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6764645778168656">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="6915451929986394" type="System">
+                            <param id="0" name="Value">floor(Car.Pathfinding.MovingAngle)</param>
+                            <param id="1" name="Lower bound">225</param>
+                            <param id="2" name="Upper bound">315</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9953970447576114" type="Car">
+                            <param id="0" name="Animation">&quot;U&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8503126001083884">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="916631371323615" type="System">
+                            <param id="0" name="Value">floor(Car.Pathfinding.MovingAngle)</param>
+                            <param id="1" name="Lower bound">315</param>
+                            <param id="2" name="Upper bound">370</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="362973159557807" type="Car">
+                            <param id="0" name="Animation">&quot;R&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9135032472543489">
+            <conditions>
+                <condition id="-11" name="For Each" sid="8400142259048096" type="System">
+                    <param id="0" name="Object">Car</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="8140682955769545" type="Car">
+                    <param id="0" name="Instance variable">failedToFindPath</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="231310596398339">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="6749436090611463" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5692628707832874">
+                            <conditions>
+                                <condition id="-16" name="Pick random instance" sid="4647642332094549" type="System">
+                                    <param id="0" name="Object">WorkPlace</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="5238306152491341" type="Car">
+                                    <param id="0" name="Instance variable">failedToFindPath</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="514990520652798" type="Car">
+                                    <param id="0" name="X">WorkPlace.X</param>
+                                    <param id="1" name="Y">WorkPlace.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9744884022563767">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4014096911352748" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="7004170377487201" type="Car">
+                                    <param id="0" name="Instance variable">failedToFindPath</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="9492517793240018" type="Car">
+                                    <param id="0" name="X">random(1708)</param>
+                                    <param id="1" name="Y">random(960)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8450723007816975">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3998927639388261" type="Car">
+                            <param id="0" name="Instance variable">TimesFailedToFindPath</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9425544624476006" type="Car" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

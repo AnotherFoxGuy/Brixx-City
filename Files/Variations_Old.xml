@@ -1,0 +1,16 @@
+<?xml version='1.0' ?>
+<HouseVariations >
+	<Amount>2</Amount>
+	<House id='0'>
+		<HouseName>name 1</HouseName>
+		<HouseFile>Var0 </HouseFile>
+	</House>
+	<House id='1'>
+		<HouseName>name 2</HouseName>
+		<HouseFile>Var1</HouseFile>
+	</House>
+	<House id='2'>
+		<HouseName>name 3</HouseName>
+		<HouseFile>Var2</HouseFile>
+	</House>
+</HouseVariations>
