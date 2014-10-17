@@ -14,8 +14,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>EMain</event-sheet>
         <event-sheet>ECar</event-sheet>
         <event-sheet>ECitizen</event-sheet>
-        <event-sheet active="1">EStaticObjects</event-sheet>
-        <event-sheet>EData</event-sheet>
+        <event-sheet>EStaticObjects</event-sheet>
+        <event-sheet active="1">EData</event-sheet>
         <event-sheet>EArrow</event-sheet>
     </open-tabs>
     <properties>
@@ -29,4 +29,23 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="1" name="StaticObjects" />
         <family expanded="1" name="Objects" />
     </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/StaticObjects/" />
+        <folder expanded="1" path="object-folder/DynamicObjects/" />
+        <folder expanded="1" path="object-folder/Storage/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/ExtraBuilding/" />
+        <folder expanded="1" path="animation-folder/House/" />
+        <folder expanded="1" path="animation-folder/WorkPlace/" />
+        <folder expanded="1" path="animation-folder/Car/" />
+        <folder expanded="1" path="animation-folder/Citizen/" />
+        <folder expanded="1" path="animation-folder/Arrow/" />
+        <folder expanded="1" path="animation-folder/FakeCursor/" />
+        <folder expanded="1" path="animation-folder/ToolBoxPreview/" />
+        <folder expanded="1" path="animation-folder/FakeCursormove/" />
+    </folders-expanded>
 </c2uistate>

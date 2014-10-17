@@ -83,7 +83,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block collapsed="1" sid="4096583864748597">
+                <event-block sid="4096583864748597">
                     <conditions>
                         <condition id="0" name="Compare selection" sid="4975119252188167" type="Objselector">
                             <param id="0" name="Comparison">3</param>

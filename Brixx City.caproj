@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>59jlnhzfyyw0</unique-id>
-    <saved-with-version>17800</saved-with-version>
+    <saved-with-version>18400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
@@ -60,8 +60,8 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
-        <object-folder expanded="1" name="StaticObjects">
+    <object-folder>
+        <object-folder name="StaticObjects">
             <object-type name="ExtraBuilding" sid="719311968373502">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -72,7 +72,7 @@
                         <behavior id="DragnDrop" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="101" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2350347142378073" speed="24">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0000.png">
                             <image-point name="Imagepoint 1" x="0.5" y="0" />
@@ -390,7 +390,7 @@
                         <behavior id="DragnDrop" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="HouseVar0" pingpong="0" repeatcount="1" repeatto="0" sid="3888176184448314" speed="5">
                         <frame duration="1" hotspotX="0.500673" hotspotY="1" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\House.png">
                             <image-point name="Imagepoint 1" x="0.500673" y="0" />
@@ -437,7 +437,7 @@
                         <behavior id="DragnDrop" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9673993552845891" speed="5">
                         <frame duration="1" hotspotX="0.501109" hotspotY="1" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\factory.png">
                             <image-point name="Imagepoint 1" x="0.501109" y="0" />
@@ -447,7 +447,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="DynamicObjects">
+        <object-folder name="DynamicObjects">
             <object-type name="Car" sid="4382848072455536">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -462,7 +462,7 @@
                         <behavior id="DragnDrop" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="D" pingpong="0" repeatcount="1" repeatto="0" sid="8029106127053605" speed="5">
                         <frame duration="1" hotspotX="1.40845" hotspotY="1" original-source="C:\tmp\0000.png">
                             <image-point name="Imagepoint 1" x="0.5" y="0" />
@@ -502,7 +502,7 @@
                         <behavior id="DragnDrop" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="21" loop="0" name="Ang" pingpong="0" repeatcount="1" repeatto="0" sid="8556674447400742" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0080.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\tmp\0081.png" />
@@ -617,7 +617,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Storage">
+        <object-folder name="Storage">
             <object-type global="1" name="Dictionary" sid="893043297037444">
                 <plugin id="Dictionary" />
             </object-type>
@@ -671,7 +671,7 @@
         </object-type>
         <object-type name="Arrow" sid="5279971954538506">
             <plugin id="Sprite" />
-            <animation-folder expanded="1">
+            <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7064104533417954" speed="5">
                     <frame duration="1" hotspotX="0.49226" hotspotY="0.939" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\TMP\untitled.png">
                         <collision-poly>
@@ -691,7 +691,7 @@
                     <behavior id="bound" />
                 </behavior-type>
             </behaviors>
-            <animation-folder expanded="1">
+            <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6957668562181498" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
@@ -813,59 +813,9 @@
         </object-type>
         <object-type name="ToolBoxPreview" sid="8103141490875521">
             <plugin id="Sprite" />
-            <animation-folder expanded="1">
+            <animation-folder>
                 <animation framecount="1" loop="0" name="Animation5" pingpong="0" repeatcount="1" repeatto="0" sid="1433633067502286" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="1" loop="0" name="Bungalow" pingpong="0" repeatcount="1" repeatto="0" sid="7873538198402408" speed="5">
-                    <frame duration="1" hotspotX="0.501018" hotspotY="0.344353" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\bungalow.lcd.png">
-                        <collision-poly>
-                            <point x="0.293279" y="0.0633609" />
-                            <point x="0.708758" y="0.0633609" />
-                            <point x="0.995927" y="0.344353" />
-                            <point x="0.98167" y="0.99449" />
-                            <point x="0.0203666" y="0.99449" />
-                            <point x="0.00203666" y="0.344353" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="4894412418187843" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\factory.png">
-                        <collision-poly>
-                            <point x="0.5" y="0.476563" />
-                            <point x="0.925781" y="0.0742188" />
-                            <point x="0.925781" y="0.5" />
-                            <point x="0.785156" y="0.785156" />
-                            <point x="0.5" y="0.962891" />
-                            <point x="0.0507813" y="0.949219" />
-                            <point x="0.0507813" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="Animation3" pingpong="0" repeatcount="1" repeatto="0" sid="9714216030284735" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\House.png">
-                        <collision-poly>
-                            <point x="0.5" y="0.5" />
-                            <point x="0.5" y="0.148438" />
-                            <point x="0.837891" y="0.162109" />
-                            <point x="0.849609" y="0.849609" />
-                            <point x="0.5" y="0.990234" />
-                            <point x="0.150391" y="0.849609" />
-                            <point x="0.394531" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="Animation4" pingpong="0" repeatcount="1" repeatto="0" sid="1622911276425659" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\House2.png">
-                        <collision-poly>
-                            <point x="0.460938" y="0.460938" />
-                            <point x="0.539063" y="0.460938" />
-                            <point x="0.990234" y="0.5" />
-                            <point x="0.988281" y="0.988281" />
-                            <point x="0.0117188" y="0.988281" />
-                            <point x="0.00976563" y="0.5" />
-                        </collision-poly>
-                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -882,7 +832,7 @@
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
-            <animation-folder expanded="1">
+            <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9091935906675016" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
@@ -913,10 +863,10 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="1">
+    <layout-folder>
         <layout>Main.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
+    <event-folder>
         <event-sheet>EMain.xml</event-sheet>
         <event-sheet>ECar.xml</event-sheet>
         <event-sheet>ECitizen.xml</event-sheet>
@@ -930,10 +880,10 @@
         <global-instance type="NodeWebkit" uid="6" />
         <global-instance type="Keyboard" uid="20" />
     </global-instances>
-    <sounds-folder expanded="1" />
-    <music-folder expanded="1" />
-    <files-folder expanded="1">
-        <file-folder expanded="0" name="Icons">
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />

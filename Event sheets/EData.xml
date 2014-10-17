@@ -70,6 +70,10 @@
                             <param id="0" name="Key">XML.StringValue(&quot;WorkPlaceName/text()&quot;)</param>
                             <param id="1" name="Value">XML.StringValue(&quot;WorkPlaceFile/text()&quot;)</param>
                         </action>
+                        <action id="0" name="Add key" sid="2649481329687435" type="Dictionary">
+                            <param id="0" name="Key">XML.StringValue(&quot;WorkPlaceFile/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WorkPlaceDataURI/text()&quot;)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="8647911384132118">
@@ -89,6 +93,10 @@
                         <action id="0" name="Add key" sid="2104098236353256" type="Dictionary">
                             <param id="0" name="Key">XML.StringValue(&quot;ExtraBuildingName/text()&quot;)</param>
                             <param id="1" name="Value">XML.StringValue(&quot;ExtraBuildingFile/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="4622750454651189" type="Dictionary">
+                            <param id="0" name="Key">XML.StringValue(&quot;ExtraBuildingFile/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;ExtraBuildingDataURI/text()&quot;)</param>
                         </action>
                     </actions>
                 </event-block>

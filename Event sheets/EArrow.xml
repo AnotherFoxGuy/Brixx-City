@@ -43,8 +43,8 @@
                             <param id="0" name="Text">Dictionary.Get(str(LastUID))</param>
                         </action>
                         <action id="10" name="Load image from URL" sid="7329310237765576" type="ToolBoxPreview">
-                            <param id="0" name="URI">Dictionary.Get(&quot;DataURI&quot;&amp;Dictionary.Get(&quot;OBJname&quot;&amp;str(LastUID)))</param>
-                            <param id="1" name="Size">1</param>
+                            <param id="0" name="URI">Dictionary.Get(Dictionary.Get(&quot;OBJname&quot;&amp;str(LastUID)))</param>
+                            <param id="1" name="Size">0</param>
                         </action>
                         <action id="0" name="Set text" sid="704511778652393" type="TextBoxText">
                             <param id="0" name="Text">Dictionary.Get(&quot;DataURI&quot;&amp;Dictionary.Get(&quot;OBJname&quot;&amp;str(LastUID)))</param>
