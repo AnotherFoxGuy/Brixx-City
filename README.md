@@ -1,7 +1,6 @@
 Brixx-City
 ==========
-<<<<<<< HEAD
+A game made with Construct 2
 
-A game
-=======
->>>>>>> origin/master
+Still WIP
+
