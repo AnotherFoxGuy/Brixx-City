@@ -1,6 +1,6 @@
 Brixx-City
 ==========
-A game made with Construct 2
+A (WIP) game made with Construct 2
 
-Still WIP
+
 
