@@ -19,6 +19,24 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="9447893603152533">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7556279033977446" type="Arrow">
+                    <param id="0" name="Object">Objects</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="6398490611958633">
+            <conditions>
+                <condition id="-22" name="Else" sid="3035459503976388" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4461340147657977" type="Arrow">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="5925546902118957">
             <conditions>
                 <condition id="1" name="On any click" sid="3561310982092376" type="Mouse" />
@@ -39,17 +57,59 @@
                             <param id="0" name="Variable">LastUID</param>
                             <param id="1" name="Value">Objects.UID</param>
                         </action>
-                        <action disabled="1" id="0" name="Set text" sid="5286625027716954" type="TextBoxText">
+                        <action id="0" name="Set text" sid="5286625027716954" type="TextBoxText">
                             <param id="0" name="Text">Dictionary.Get(str(LastUID))</param>
                         </action>
-                        <action id="10" name="Load image from URL" sid="7329310237765576" type="ToolBoxPreview">
-                            <param id="0" name="URI">Dictionary.Get(Dictionary.Get(&quot;OBJname&quot;&amp;str(LastUID)))</param>
-                            <param id="1" name="Size">0</param>
-                        </action>
-                        <action id="0" name="Set text" sid="704511778652393" type="TextBoxText">
-                            <param id="0" name="Text">Dictionary.Get(&quot;DataURI&quot;&amp;Dictionary.Get(&quot;OBJname&quot;&amp;str(LastUID)))</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="91364152499719">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6653539206646675" type="System">
+                                    <param id="0" name="Variable">ToyBox</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Opened&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7989314198248916">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="4335079501945518" type="Mouse">
+                                            <param id="0" name="Object">StaticObjects</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="10" name="Load image from URL" sid="772202812112555" type="ToyBoxPreview">
+                                            <param id="0" name="URI">Dictionary.Get(Dictionary.Get(&quot;OBJname&quot;&amp;str(LastUID)))</param>
+                                            <param id="1" name="Size">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8374986407355838" type="ToyBoxPreview">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4711618574753446">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="6161925011412744" type="Mouse">
+                                            <param id="0" name="Object">DynamicObjects</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="10" name="Load image from URL" sid="8870098762337818" type="ToyBoxPreview">
+                                            <param id="0" name="URI">Dictionary.Get(Dictionary.Get(&quot;OBJname&quot;&amp;str(LastUID)))</param>
+                                            <param id="1" name="Size">0</param>
+                                        </action>
+                                        <action disabled="1" id="-15" name="Set visible" sid="6324923720746512" type="ToyBoxPreview">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5684926274637806" type="ToyBoxPreview">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="6638260910899895">
                     <conditions>
@@ -61,6 +121,9 @@
                         </action>
                         <action id="0" name="Set text" sid="5768008372758096" type="TextBoxText">
                             <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9611706814225471" type="ToyBoxPreview">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>

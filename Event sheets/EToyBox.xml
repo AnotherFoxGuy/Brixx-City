@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EToyBox</name>
+    <events>
+        <variable constant="0" name="ToyBox" sid="6799836338465396" static="0" type="text">Opened</variable>
+        <event-block sid="6271427154053149">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9384782915883002" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="9898479688020128" type="Objselector">
+                    <param id="0" name="Pin to">ToyBox</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="230902574783273" type="TextBoxText">
+                    <param id="0" name="Pin to">ToyBox</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="5383766514101189" type="LoadButton">
+                    <param id="0" name="Pin to">ToyBox</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="8462729030049038" type="SaveButton">
+                    <param id="0" name="Pin to">ToyBox</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="355477737116745" type="ToyBoxPreview">
+                    <param id="0" name="Pin to">ToyBox</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="2" name="Set visible" sid="6281197436369014" type="LoadButton">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="2" name="Set visible" sid="5624688564022233" type="SaveButton">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="3" name="Set visible" sid="6047775674294434" type="TextBoxText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="2" name="Set visible" sid="5412852833201033" type="Objselector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5474110270619186" type="ToyBoxPreview">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="2263304581981496" type="System">
+                    <param id="0" name="Variable">ToyBox</param>
+                    <param id="1" name="Value">&quot;Closed&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6514663685892688">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4980071612376418" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">1</param>
+                    <param id="2" name="Object clicked">ToyBox</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="7954808731122308" type="ToyBox">
+                    <param id="0" name="Animation">&quot;Opened&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6985676034935747" type="ToyBox">
+                    <param id="0" name="Animation">&quot;Closing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="2" name="Set visible" sid="6839697456392808" type="LoadButton">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="2" name="Set visible" sid="9310569713237172" type="SaveButton">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="3" name="Set visible" sid="8162923504725795" type="TextBoxText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="2" name="Set visible" sid="481280556675822" type="Objselector">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2210883707201128" type="ToyBoxPreview">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="9559657806121183" type="System">
+                    <param id="0" name="Variable">ToyBox</param>
+                    <param id="1" name="Value">&quot;Closed&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="982070236638582">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4424178076253862" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">1</param>
+                    <param id="2" name="Object clicked">ToyBox</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="7070148485196317" type="ToyBox">
+                    <param id="0" name="Animation">&quot;Closed&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6269600492616017" type="ToyBox">
+                    <param id="0" name="Animation">&quot;Opening&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9968185205343675">
+            <conditions>
+                <condition id="4" name="On finished" sid="735919164271237" type="ToyBox">
+                    <param id="0" name="Animation">&quot;Closing&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4526467249360773" type="ToyBox">
+                    <param id="0" name="Animation">&quot;Closed&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6715362589075936">
+            <conditions>
+                <condition id="4" name="On finished" sid="3777013398842315" type="ToyBox">
+                    <param id="0" name="Animation">&quot;Opening&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2070246005865513" type="ToyBox">
+                    <param id="0" name="Animation">&quot;Opened&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="2" name="Set visible" sid="6122605841120168" type="LoadButton">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="2" name="Set visible" sid="4122027819333654" type="SaveButton">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="3" name="Set visible" sid="8301774623927166" type="TextBoxText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="2" name="Set visible" sid="5535738775153399" type="Objselector">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="495001183634841" type="ToyBoxPreview">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="3045692178837987" type="System">
+                    <param id="0" name="Variable">ToyBox</param>
+                    <param id="1" name="Value">&quot;Opened&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

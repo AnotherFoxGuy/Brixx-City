@@ -10,13 +10,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>Main</layout>
-        <event-sheet>EMain</event-sheet>
+        <layout>Game</layout>
+        <layout active="1">MainMenu</layout>
+        <event-sheet>EGame</event-sheet>
         <event-sheet>ECar</event-sheet>
         <event-sheet>ECitizen</event-sheet>
         <event-sheet>EStaticObjects</event-sheet>
-        <event-sheet active="1">EData</event-sheet>
+        <event-sheet>EData</event-sheet>
         <event-sheet>EArrow</event-sheet>
+        <event-sheet>EToyBox</event-sheet>
+        <event-sheet>EMainMenu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -44,8 +47,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Car/" />
         <folder expanded="1" path="animation-folder/Citizen/" />
         <folder expanded="1" path="animation-folder/Arrow/" />
-        <folder expanded="1" path="animation-folder/FakeCursor/" />
-        <folder expanded="1" path="animation-folder/ToolBoxPreview/" />
-        <folder expanded="1" path="animation-folder/FakeCursormove/" />
+        <folder expanded="1" path="animation-folder/ToyBoxPreview/" />
+        <folder expanded="1" path="animation-folder/ToyBox/" />
+        <folder expanded="1" path="animation-folder/Save/" />
     </folders-expanded>
 </c2uistate>

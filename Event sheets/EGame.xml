@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EGame</name>
+    <events>
+        <include>EToyBox</include>
+        <include>EArrow</include>
+        <include>EData</include>
+        <include>EStaticObjects</include>
+        <include>ECitizen</include>
+        <include>ECar</include>
+        <variable constant="0" name="JSON" sid="6795378969129132" static="0" type="text">{&quot;c2tilemap&quot;:true,&quot;width&quot;:9,&quot;height&quot;:13,&quot;data&quot;:&quot;35x0,8,81x0&quot;}</variable>
+        <variable constant="0" name="HouseNames" sid="9416315721467261" static="0" type="text"></variable>
+        <variable constant="0" name="WorkPlaceNames" sid="6732764979401432" static="0" type="text"></variable>
+        <variable constant="0" name="ExtraBuildingNames" sid="1156505903008907" static="0" type="text"></variable>
+        <variable constant="1" name="DIVIS" sid="9235676036127609" static="0" type="number">109</variable>
+        <variable constant="0" name="MaxSpawnAmount" sid="2864446589418824" static="0" type="number">0</variable>
+        <variable constant="0" name="AmountofCitizenSpawnt" sid="9848803096169166" static="0" type="number">0</variable>
+        <variable constant="0" name="AmountofCarsSpawnt" sid="542827829967612" static="0" type="number">0</variable>
+        <variable constant="0" name="LastUID" sid="7022418994006204" static="0" type="number">0</variable>
+        <variable constant="1" name="TILEX" sid="3642476312808294" static="0" type="number">504</variable>
+        <variable constant="1" name="TILEY" sid="5073629196901325" static="0" type="number">218</variable>
+        <event-block sid="5415670881388734">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="383370852545283" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="4" name="Load" sid="3340707959865496" type="Tilemap">
+                    <param id="0" name="JSON">JSON</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5621645477637031">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6369182708933529" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="3968687875605846" type="ErrorText">
+                    <param id="0" name="X">-500</param>
+                    <param id="1" name="Y">-500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6095671385049614">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="3315081191924723" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="2401879959003361" type="Car" />
+                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="4594121475836565" type="Citizen" />
+            </actions>
+        </event-block>
+        <event-block sid="532828355179087">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="244556230927933" type="Mouse">
+                    <param id="0" name="Object">ToyBox</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="1494913696269996">
+            <conditions>
+                <condition id="-22" name="Else" sid="1488599296677292" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4096583864748597">
+                    <conditions>
+                        <condition id="0" name="Compare selection" sid="4975119252188167" type="Objselector">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Index">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="5782744582595378" type="House">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="6071264962578779" type="WorkPlace">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="5506651809781242" type="ExtraBuilding">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4304186231467588">
+                            <conditions>
+                                <condition id="2" name="Mouse button is down" sid="7880695247253159" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set tile" sid="2405273074354088" type="Tilemap">
+                                    <param id="0" name="Tile X">floor(Mouse.X/TILEX)</param>
+                                    <param id="1" name="Tile Y">floor(Mouse.Y/TILEY)</param>
+                                    <param id="2" name="Tile">Objselector.SelectedIndex</param>
+                                    <param id="3" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6183589739964697">
+                            <conditions>
+                                <condition id="2" name="Mouse button is down" sid="5999903973430544" type="Mouse">
+                                    <param id="0" name="Mouse button">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set tile" sid="8087622855650611" type="Tilemap">
+                                    <param id="0" name="Tile X">floor(Mouse.X/TILEX)</param>
+                                    <param id="1" name="Tile Y">floor(Mouse.Y/TILEY)</param>
+                                    <param id="2" name="Tile">0</param>
+                                    <param id="3" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7778654226693781">
+                    <conditions>
+                        <condition id="0" name="Compare selection" sid="1339205203764344" type="Objselector">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Index">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="8033498525915561" type="House">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="2395935132471357" type="WorkPlace">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="7552949700773869" type="ExtraBuilding">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5712133215423106">
+            <conditions>
+                <condition id="0" name="On click" sid="6605596365114349" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3239452593861618">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="3744663660309052" type="Mouse">
+                            <param id="0" name="Object">StaticObjects</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4114634569588517" type="StaticObjects" />
+                        <action id="-15" name="Set visible" sid="4431888040525755" type="Arrow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3192431657789447">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1119689228655899" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2914547320331024">
+                            <conditions>
+                                <condition id="0" name="Compare selection" sid="2917529071117824" type="Objselector">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Index">11</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8283602361285034">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="6146225033829225" type="System">
+                                            <param id="0" name="First value">find(HouseNames, Objselector.SelectedText)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="3329432289665371" type="System">
+                                            <param id="0" name="Object to create">House</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">round(Mouse.X/DIVIS)*DIVIS</param>
+                                            <param id="3" name="Y">round(Mouse.Y/DIVIS)*DIVIS</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="1077861523919541" type="House">
+                                            <param id="0" name="X">round(House.X/DIVIS)*DIVIS</param>
+                                            <param id="1" name="Y">round(House.Y/DIVIS)*DIVIS</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2282295704406309" type="System">
+                                            <param id="0" name="Variable">LastUID</param>
+                                            <param id="1" name="Value">Objects.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5821975499477392">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9319656862808482" type="System">
+                                            <param id="0" name="First value">find(WorkPlaceNames, Objselector.SelectedText)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="6568984598420502" type="System">
+                                            <param id="0" name="Object to create">WorkPlace</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">round(Mouse.X/DIVIS)*DIVIS</param>
+                                            <param id="3" name="Y">round(Mouse.Y/DIVIS)*DIVIS</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="137527560433382" type="WorkPlace">
+                                            <param id="0" name="X">round(WorkPlace.X/DIVIS)*DIVIS</param>
+                                            <param id="1" name="Y">round(WorkPlace.Y/DIVIS)*DIVIS</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5932374586809131" type="System">
+                                            <param id="0" name="Variable">LastUID</param>
+                                            <param id="1" name="Value">Objects.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9573942375536107">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="1274571777291391" type="System">
+                                            <param id="0" name="First value">find(ExtraBuildingNames, Objselector.SelectedText)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="5141198640297034" type="System">
+                                            <param id="0" name="Object to create">ExtraBuilding</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">round(Mouse.X/DIVIS)*DIVIS</param>
+                                            <param id="3" name="Y">round(Mouse.Y/DIVIS)*DIVIS</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="978646010403467" type="ExtraBuilding">
+                                            <param id="0" name="X">round(ExtraBuilding.X/DIVIS)*DIVIS</param>
+                                            <param id="1" name="Y">round(ExtraBuilding.Y/DIVIS)*DIVIS</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2227610234192636" type="System">
+                                            <param id="0" name="Variable">LastUID</param>
+                                            <param id="1" name="Value">Objects.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9888483722056241">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="8612865040370683" type="StaticObjects">
+                    <param id="0" name="Object">StaticObjects</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="4840575722307737" type="ErrorText">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+                <action id="-24" name="Move to top" sid="768601618543143" type="ErrorText" />
+            </actions>
+            <sub-events>
+                <event-block sid="3557339809032186">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="5440993276970054" type="Mouse">
+                            <param id="0" name="Object">StaticObjects</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="518812386014084">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3483061172591907" type="System" />
+                        <condition id="-16" name="Pick random instance" sid="4835231662780172" type="System">
+                            <param id="0" name="Object">StaticObjects</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8334290268463518" type="StaticObjects" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1666520818157628">
+            <conditions>
+                <condition id="0" name="On clicked" sid="8575723811987206" type="SaveButton" />
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="9055159998381003" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8259544280014953">
+            <conditions>
+                <condition id="0" name="On clicked" sid="3422039374841473" type="LoadButton" />
+            </conditions>
+            <actions>
+                <action id="-37" name="Load" sid="3038996367793936" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9345173090185008">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7123300906350616" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2353530087778346">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="6435022789440627" type="System">
+                            <param id="0" name="Object">Objects</param>
+                            <param id="1" name="Expression">Objects.Y</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="6989739418188334" type="Objects" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

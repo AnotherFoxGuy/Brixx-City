@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EMainMenu</name>
+    <events>
+        <include>ECar</include>
+        <include>ECitizen</include>
+        <event-block sid="341554880756883">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6693927671896533" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="2250072137498422" type="Citizen">
+                    <param id="0" name="Obstacle">Tilemap</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="4698512556613449" type="StaticObjects">
+                    <param id="0" name="Object">DynamicObjects</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="7623670197693948" type="StartGame">
+                    <param id="0" name="Pin to">MainMenuFill</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="2429009271353638" type="Tutorial">
+                    <param id="0" name="Pin to">MainMenuFill</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="9849219367603613" type="MainMenuFill">
+                    <param id="0" name="Instance variable">MaxX</param>
+                    <param id="1" name="Value">MainMenuFill.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="226729693997092">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6706418948734436" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="6418073162702126" type="Save">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7618603977738546">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="9902915776821369" type="System">
+                    <param id="0" name="Interval (seconds)">10</param>
+                </condition>
+                <condition id="-16" name="Pick random instance" sid="4120198175015365" type="System">
+                    <param id="0" name="Object">StaticObjects</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="3349736515383125" type="StaticObjects">
+                    <param id="0" name="Object">DynamicObjects</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3222552351036172">
+            <conditions>
+                <condition id="0" name="On clicked" sid="3033452494973652" type="StartGame" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="3052851012374106" type="MainMenuFill">
+                    <param id="0" name="Instance variable">Move</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1434951244482448">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="1069979222974591" type="MainMenuFill">
+                    <param id="0" name="Instance variable">Move</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4964415956755478">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7600410330594661" type="MainMenuFill">
+                            <param id="0" name="Instance variable">MaxX</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">160</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="8335919189158184" type="MainMenuFill">
+                            <param id="0" name="X">MainMenuFill.X+5</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="33071338975878" type="MainMenuFill">
+                            <param id="0" name="Instance variable">MaxX</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3705117454087522">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="526095746475405" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="9593683750073754" type="MainMenuFill">
+                            <param id="0" name="X">MainMenuFill.X-20</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7047853790236563">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="7441936253990126" type="MainMenuFill">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">-1500</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="141791783750658" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

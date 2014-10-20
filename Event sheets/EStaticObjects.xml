@@ -4,6 +4,50 @@
     <name>EStaticObjects</name>
     <events>
         <variable constant="0" name="RandomNumber" sid="4163690159853403" static="0" type="number">0</variable>
+        <event-block sid="2554054741817443">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1390048445452597" type="System">
+                    <param id="0" name="First value">AmountofCarsSpawnt</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">MaxSpawnAmount</param>
+                </condition>
+                <condition id="-16" name="Pick random instance" sid="5553415245979329" type="System">
+                    <param id="0" name="Object">House</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="3505723868023908" type="System">
+                    <param id="0" name="Interval (seconds)">20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="2951834890242954" type="House">
+                    <param id="0" name="Object">Car</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9643659534095821">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="5032629266844244" type="System">
+                    <param id="0" name="First value">AmountofCitizenSpawnt</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">MaxSpawnAmount</param>
+                </condition>
+                <condition id="-16" name="Pick random instance" sid="671603345150744" type="System">
+                    <param id="0" name="Object">House</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="41939123248781" type="System">
+                    <param id="0" name="Interval (seconds)">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="9077614174877006" type="House">
+                    <param id="0" name="Object">Citizen</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="3017583109436482">
             <conditions>
                 <condition id="-18" name="On created" sid="2548545829668149" type="House" />

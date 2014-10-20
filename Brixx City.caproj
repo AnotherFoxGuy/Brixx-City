@@ -2,7 +2,7 @@
 <c2project>
     <name>Brixx City</name>
     <description></description>
-    <version>1.0.0.0</version>
+    <version>0.0.1.0</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -26,12 +27,10 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
-        <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
-        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -39,19 +38,20 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>5000</width>
-        <height>2500</height>
+        <width>3840</width>
+        <height>2160</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>MainMenu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">High quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Scale outer</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Percentage text</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D web</prop>
@@ -393,8 +393,7 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="HouseVar0" pingpong="0" repeatcount="1" repeatto="0" sid="3888176184448314" speed="5">
                         <frame duration="1" hotspotX="0.500673" hotspotY="1" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\House.png">
-                            <image-point name="Imagepoint 1" x="0.500673" y="0" />
-                            <image-point name="Imagepoint 2" x="0.500673" y="1.28993" />
+                            <image-point name="Imagepoint 1" x="0.489906" y="1.32859" />
                             <collision-poly>
                                 <point x="0.479139" y="0.516785" />
                                 <point x="0.479139" y="0.282808" />
@@ -407,14 +406,12 @@
                     </animation>
                     <animation framecount="1" loop="0" name="HouseVar1" pingpong="0" repeatcount="1" repeatto="0" sid="2191469489883757" speed="5">
                         <frame duration="1" hotspotX="0.501018" hotspotY="1" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\bungalow.lcd.png">
-                            <image-point name="Imagepoint 1" x="0.501018" y="0" />
-                            <image-point name="Imagepoint 2" x="0.501018" y="1.28926" />
+                            <image-point name="Imagepoint 1" x="0.509165" y="1.66391" />
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="HouseVar2" pingpong="0" repeatcount="1" repeatto="0" sid="3998440521458425" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Users\sietze\Documents\MEGA\Construct 2\LEGOCity\Files\House2.png">
-                            <image-point name="Imagepoint 1" x="0.5" y="0" />
-                            <image-point name="Imagepoint 2" x="0.5" y="1.28986" />
+                            <image-point name="Imagepoint 1" x="0.492095" y="1.88406" />
                             <collision-poly>
                                 <point x="0.460474" y="0.00724638" />
                                 <point x="0.539526" y="0.00724638" />
@@ -684,19 +681,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="FakeCursor" sid="7642845780726617">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="BoundToLayout" sid="9659074563791577">
-                    <behavior id="bound" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6957668562181498" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="ErrorText" sid="8266136746665515">
             <plugin id="Text" />
         </object-type>
@@ -799,44 +783,133 @@
                 </tile>
             </tiles>
         </object-type>
-        <object-type name="ToolBox" sid="583100063783597">
-            <plugin id="NinePatch" />
+        <object-type name="ToyBoxPreview" sid="8103141490875521">
+            <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="DragDrop" sid="6147304453524375">
-                    <behavior id="DragnDrop" />
-                </behavior-type>
-                <behavior-type name="NoSave" sid="507136832862803">
-                    <behavior id="NoSave" />
+                <behavior-type name="Pin" sid="2700049737185187">
+                    <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
-            <texture original-source="D:\Users\sietze\Documents\MEGA\Construct 2\tests\TB.png" />
-        </object-type>
-        <object-type name="ToolBoxPreview" sid="8103141490875521">
-            <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Animation5" pingpong="0" repeatcount="1" repeatto="0" sid="1433633067502286" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="FakeCursormove" sid="3845252961672662">
+        <object-type name="ToyBox" sid="6485087568137642">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="ScrollTo" sid="1963314910788067">
-                    <behavior id="scrollto" />
+                <behavior-type name="DragDrop" sid="2824779556655417">
+                    <behavior id="DragnDrop" />
                 </behavior-type>
-                <behavior-type name="BoundToLayout" sid="5387376909915279">
+                <behavior-type name="BoundToLayout" sid="5640163205755">
                     <behavior id="bound" />
-                </behavior-type>
-                <behavior-type name="Pin" sid="2498621071018037">
-                    <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9091935906675016" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="9108070798023402" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                </animation>
+                <animation framecount="26" loop="0" name="Closing" pingpong="0" repeatcount="1" repeatto="0" sid="6209745593687781" speed="20">
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\009.png" />
+                    <frame duration="1" hotspotX="0.501683" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\014.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\015.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\016.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\017.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\018.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\019.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\020.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\021.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\022.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\023.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\024.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\025.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Opened" pingpong="0" repeatcount="1" repeatto="0" sid="741679620349109" speed="5">
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0" />
+                </animation>
+                <animation framecount="26" loop="0" name="Opening" pingpong="0" repeatcount="1" repeatto="0" sid="417337938593569" speed="20">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\014.png" />
+                    <frame duration="1" hotspotX="0.501683" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\015.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\016.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\017.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\018.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\019.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\020.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\021.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\022.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\023.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\024.png" />
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\025.png" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="2910765801541669">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Save" sid="9907545703046794">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="6375975637883309">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7661855695647308" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MainMenuFill" sid="5909812704229444">
+            <plugin id="NinePatch" />
+            <instance-variables>
+                <instance-variable name="Move" sid="9634271663960736" type="boolean" />
+                <instance-variable name="MaxX" sid="2787254400349907" type="number" />
+            </instance-variables>
+            <texture original-source="E:\MEGA\Construct 2\tests\TB.png" />
+        </object-type>
+        <object-type name="StartGame" sid="8908543663518884">
+            <plugin id="Button" />
+            <behaviors>
+                <behavior-type name="Pin" sid="5205989999189433">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Tutorial" sid="4532405959694776">
+            <plugin id="Button" />
+            <behaviors>
+                <behavior-type name="Pin" sid="7780193384235004">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
         </object-type>
     </object-folder>
     <families>
@@ -864,21 +937,25 @@
         </family>
     </families>
     <layout-folder>
-        <layout>Main.xml</layout>
+        <layout>Game.xml</layout>
+        <layout>MainMenu.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>EMain.xml</event-sheet>
+        <event-sheet>EGame.xml</event-sheet>
         <event-sheet>ECar.xml</event-sheet>
         <event-sheet>ECitizen.xml</event-sheet>
         <event-sheet>EStaticObjects.xml</event-sheet>
         <event-sheet>EData.xml</event-sheet>
         <event-sheet>EArrow.xml</event-sheet>
+        <event-sheet>EToyBox.xml</event-sheet>
+        <event-sheet>EMainMenu.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="3" />
         <global-instance type="AJAX" uid="12" />
         <global-instance type="NodeWebkit" uid="6" />
         <global-instance type="Keyboard" uid="20" />
+        <global-instance type="Function" uid="7" />
     </global-instances>
     <sounds-folder />
     <music-folder />

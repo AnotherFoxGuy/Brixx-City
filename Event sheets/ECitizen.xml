@@ -13,32 +13,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="5735250898169412">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="107201722806599" type="System">
-                    <param id="0" name="First value">AmountofCitizenSpawnt</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">MaxSpawnAmount</param>
-                </condition>
-                <condition id="-16" name="Pick random instance" sid="1630726131500667" type="System">
-                    <param id="0" name="Object">House</param>
-                </condition>
-                <condition id="-6" name="Every X seconds" sid="1825004414210325" type="System">
-                    <param id="0" name="Interval (seconds)">10</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="8364219874806737" type="House">
-                    <param id="0" name="Object">Citizen</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">2</param>
-                </action>
-                <action id="0" name="Add key" sid="8483559118285721" type="Dictionary">
-                    <param id="0" name="Key">str(Citizen.UID)</param>
-                    <param id="1" name="Value">Dictionary.Get(&quot;CitizenName&quot;&amp;str(House.UID))</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="3876350821808516">
             <conditions>
                 <condition id="-18" name="On created" sid="9440488560593208" type="Citizen" />
@@ -47,6 +21,10 @@
                 <action id="-10" name="Add to" sid="2070419761327051" type="System">
                     <param id="0" name="Variable">AmountofCitizenSpawnt</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Add key" sid="2579810089595312" type="Dictionary">
+                    <param id="0" name="Key">str(Citizen.UID)</param>
+                    <param id="1" name="Value">Dictionary.Get(&quot;CitizenName&quot;&amp;str(House.UID))</param>
                 </action>
             </actions>
             <sub-events>
@@ -74,8 +52,8 @@
                     </conditions>
                     <actions>
                         <action behavior="Pathfinding" id="0" name="Find path" sid="3230103549554162" type="Citizen">
-                            <param id="0" name="X">random(1708)</param>
-                            <param id="1" name="Y">random(960)</param>
+                            <param id="0" name="X">random(5050)</param>
+                            <param id="1" name="Y">random(2618)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -166,7 +144,6 @@
         </event-block>
         <event-block sid="3416261972963683">
             <conditions>
-                <condition id="-1" name="Every tick" sid="1941329905878806" type="System" />
                 <condition id="-11" name="For Each" sid="2474885771827005" type="System">
                     <param id="0" name="Object">Citizen</param>
                 </condition>
@@ -258,77 +235,74 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="2064331818004002">
-            <conditions>
-                <condition id="-11" name="For Each" sid="7411465468179958" type="System">
-                    <param id="0" name="Object">Citizen</param>
-                </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="6409455058480771" type="Citizen">
-                    <param id="0" name="Instance variable">failedToFindPath</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="147106013160529" type="Citizen">
-                    <param id="0" name="Animation">&quot;Ang&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="5206641709653549">
+                <event-block sid="7980344439584007">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="2959934482994362" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="5972478997219471">
-                            <conditions>
-                                <condition id="-16" name="Pick random instance" sid="2775158067131487" type="System">
-                                    <param id="0" name="Object">WorkPlace</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="686608201494264" type="Citizen">
-                                    <param id="0" name="X">WorkPlace.X</param>
-                                    <param id="1" name="Y">WorkPlace.Y</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="3808385785251923" type="Citizen">
-                                    <param id="0" name="Instance variable">failedToFindPath</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="7569909062668983">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="1677708047937365" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="2222267054095488" type="Citizen">
-                                    <param id="0" name="X">random(1708)</param>
-                                    <param id="1" name="Y">random(960)</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="966264857038425" type="Citizen">
-                                    <param id="0" name="Instance variable">failedToFindPath</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="2982410500434905">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6644801739763251" type="Citizen">
-                            <param id="0" name="Instance variable">TimesFailedToFindPath</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">10</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5261415745956072" type="Citizen">
+                            <param id="0" name="Instance variable">failedToFindPath</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="1061975228901125" type="Citizen" />
+                        <action id="4" name="Set animation" sid="3729553469053069" type="Citizen">
+                            <param id="0" name="Animation">&quot;Ang&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="4602379563818352">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="615461989216999" type="System">
+                                    <param id="0" name="Interval (seconds)">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4284235859669043">
+                                    <conditions>
+                                        <condition id="-16" name="Pick random instance" sid="5137050622997421" type="System">
+                                            <param id="0" name="Object">WorkPlace</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pathfinding" id="0" name="Find path" sid="3868910364523416" type="Citizen">
+                                            <param id="0" name="X">WorkPlace.X</param>
+                                            <param id="1" name="Y">WorkPlace.Y</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="9968425750345982" type="Citizen">
+                                            <param id="0" name="Instance variable">failedToFindPath</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3855190048952354">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2579809693148012" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pathfinding" id="0" name="Find path" sid="4083187331541922" type="Citizen">
+                                            <param id="0" name="X">random(1708)</param>
+                                            <param id="1" name="Y">random(960)</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="195544313996537" type="Citizen">
+                                            <param id="0" name="Instance variable">failedToFindPath</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="550673133301301">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6990817590137606" type="Citizen">
+                                    <param id="0" name="Instance variable">TimesFailedToFindPath</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="1054434183825302" type="Citizen" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
