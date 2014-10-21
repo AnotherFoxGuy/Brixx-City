@@ -17,7 +17,6 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="NodeWebkit" version="1">Node-Webkit</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
@@ -633,9 +632,6 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
-            <object-type name="NodeWebkit" sid="9887514484161729">
-                <plugin id="NodeWebkit" />
-            </object-type>
             <object-type name="TextBoxText" sid="7892517675113062">
                 <plugin id="TextBox" />
                 <behaviors>
@@ -914,6 +910,87 @@
                 </behavior-type>
             </behaviors>
         </object-type>
+        <object-type name="AnotherGameCompany" sid="6082489527412805">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2933855838612043" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\sietze\Documents\MEGA\blender\AnotherGameCompany.png">
+                        <collision-poly>
+                            <point x="0.230208" y="0.409259" />
+                            <point x="0.5" y="0.419444" />
+                            <point x="0.805382" y="0.5" />
+                            <point x="0.862847" y="0.756173" />
+                            <point x="0.5" y="0.486111" />
+                            <point x="0.217014" y="0.614198" />
+                            <point x="0.102604" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TutBox" sid="4471591864371947">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9147584592535158" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\tmp\0000.png">
+                        <collision-poly>
+                            <point x="0.313525" y="0.0961538" />
+                            <point x="0.485656" y="0.00961538" />
+                            <point x="0.694672" y="0.00961538" />
+                            <point x="0.995902" y="0.5" />
+                            <point x="0.694672" y="0.990385" />
+                            <point x="0.485656" y="0.990385" />
+                            <point x="0.313525" y="0.903846" />
+                            <point x="0.00409836" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Up" pingpong="0" repeatcount="1" repeatto="0" sid="8682778630877339" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\tmp\0002.png">
+                        <collision-poly>
+                            <point x="0.0906977" y="0.00813008" />
+                            <point x="0.416279" y="0.162602" />
+                            <point x="0.653488" y="0.162602" />
+                            <point x="0.995349" y="0.577236" />
+                            <point x="0.653488" y="0.99187" />
+                            <point x="0.416279" y="0.99187" />
+                            <point x="0.232558" y="0.898374" />
+                            <point x="0.0511628" y="0.577236" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Down" pingpong="0" repeatcount="1" repeatto="0" sid="7838005424408115" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\tmp\0001.png">
+                        <collision-poly>
+                            <point x="0.232558" y="0.101626" />
+                            <point x="0.416279" y="0.00813008" />
+                            <point x="0.653488" y="0.00813008" />
+                            <point x="0.995349" y="0.422764" />
+                            <point x="0.653488" y="0.837398" />
+                            <point x="0.416279" y="0.837398" />
+                            <point x="0.0906977" y="0.99187" />
+                            <point x="0.0488372" y="0.422764" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TutBoxText" sid="6948919393827318">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="4776232925661855">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="TutBoxButton" sid="1770438123935369">
+            <plugin id="Button" />
+            <behaviors>
+                <behavior-type name="Pin" sid="4192275370399046">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
     <families>
         <family name="DynamicObjects" plugin-id="Sprite" sid="4472858150845631">
@@ -940,11 +1017,12 @@
         </family>
     </families>
     <layout-folder>
-        <layout>Game.xml</layout>
+        <layout>MainGame.xml</layout>
         <layout>MainMenu.xml</layout>
+        <layout>Tutorial.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>EGame.xml</event-sheet>
+        <event-sheet>EMainGame.xml</event-sheet>
         <event-sheet>ECar.xml</event-sheet>
         <event-sheet>ECitizen.xml</event-sheet>
         <event-sheet>EStaticObjects.xml</event-sheet>
@@ -952,11 +1030,11 @@
         <event-sheet>EArrow.xml</event-sheet>
         <event-sheet>EToyBox.xml</event-sheet>
         <event-sheet>EMainMenu.xml</event-sheet>
+        <event-sheet>ETutorial.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="3" />
         <global-instance type="AJAX" uid="12" />
-        <global-instance type="NodeWebkit" uid="6" />
         <global-instance type="Keyboard" uid="20" />
         <global-instance type="Function" uid="7" />
     </global-instances>

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EMainMenu</name>
     <events>
+        <variable constant="0" name="LoadLayout" sid="8946723654057142" static="0" type="text"></variable>
         <include>ECar</include>
         <include>ECitizen</include>
         <event-block sid="341554880756883">
@@ -69,6 +70,25 @@
                     <param id="0" name="Instance variable">Move</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="365137366250837" type="System">
+                    <param id="0" name="Variable">LoadLayout</param>
+                    <param id="1" name="Value">&quot;MainGame&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8975355210762005">
+            <conditions>
+                <condition id="0" name="On clicked" sid="357303932888126" type="Tutorial" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="1626316271951474" type="MainMenuFill">
+                    <param id="0" name="Instance variable">Move</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="1467286807435978" type="System">
+                    <param id="0" name="Variable">LoadLayout</param>
+                    <param id="1" name="Value">&quot;Tutorial&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="1434951244482448">
@@ -117,8 +137,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="141791783750658" type="System">
-                    <param id="0" name="Layout">Game</param>
+                <action id="-25" name="Go to layout (by name)" sid="141791783750658" type="System">
+                    <param id="0" name="Layout">LoadLayout</param>
                 </action>
             </actions>
         </event-block>
