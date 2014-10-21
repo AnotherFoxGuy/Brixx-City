@@ -288,6 +288,68 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="WorkPlace" uid="32">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4348</x>
+                        <y>787</y>
+                        <z>0</z>
+                        <width>372.861022949</width>
+                        <height>394.35635376</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501108646</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ExtraBuilding" uid="33">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1917</x>
+                        <y>980</y>
+                        <z>0</z>
+                        <width>185.390686035</width>
+                        <height>106.235107422</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -338,15 +400,10 @@
                 </instance>
                 <instance type="MainMenuFill" uid="27">
                     <properties>
-                        <left-margin>21</left-margin>
-                        <right-margin>21</right-margin>
-                        <top-margin>21</top-margin>
-                        <bottom-margin>21</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
                         <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
                         <Move>false</Move>
@@ -355,14 +412,15 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>125</x>
-                        <y>630</y>
+                        <x>150</x>
+                        <y>910</y>
                         <z>0</z>
-                        <width>531</width>
-                        <height>900</height>
+                        <width>515</width>
+                        <height>699</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -383,8 +441,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>203</x>
-                        <y>1133</y>
+                        <x>213</x>
+                        <y>1089</y>
                         <z>0</z>
                         <width>388.855987549</width>
                         <height>129.618667603</height>
@@ -410,8 +468,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>196</x>
-                        <y>1344</y>
+                        <x>205</x>
+                        <y>1391</y>
                         <z>0</z>
                         <width>405</width>
                         <height>121</height>

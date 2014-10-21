@@ -17,7 +17,6 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="NodeWebkit" version="1">Node-Webkit</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -808,66 +807,66 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Closed" pingpong="0" repeatcount="1" repeatto="0" sid="9108070798023402" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0025.png" />
                 </animation>
                 <animation framecount="26" loop="0" name="Closing" pingpong="0" repeatcount="1" repeatto="0" sid="6209745593687781" speed="20">
-                    <frame duration="1" hotspotX="0.50165" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\000.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\001.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\002.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\003.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\004.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\005.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\006.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\007.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\008.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\009.png" />
-                    <frame duration="1" hotspotX="0.501683" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\010.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\011.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\012.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\013.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\014.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\015.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\016.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\017.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\018.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\019.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\020.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\021.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\022.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\023.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\024.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\OC\025.png" />
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0" original-source="C:\tmp\0000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0001.png" />
+                    <frame duration="1" hotspotX="0.501718" hotspotY="0" original-source="C:\tmp\0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0014.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0015.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0016.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0017.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0018.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0019.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0020.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0021.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0022.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0023.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0024.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0025.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="Opened" pingpong="0" repeatcount="1" repeatto="0" sid="741679620349109" speed="5">
-                    <frame duration="1" hotspotX="0.50165" hotspotY="0" />
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0" original-source="C:\tmp\0000.png" />
                 </animation>
                 <animation framecount="26" loop="0" name="Opening" pingpong="0" repeatcount="1" repeatto="0" sid="417337938593569" speed="20">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\000.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\001.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\002.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\003.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\004.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\005.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\006.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\007.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\008.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\009.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\010.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\011.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\012.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\013.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\014.png" />
-                    <frame duration="1" hotspotX="0.501683" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\015.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\016.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\017.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\018.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\019.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\020.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\021.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\022.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\023.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\024.png" />
-                    <frame duration="1" hotspotX="0.50165" hotspotY="0" original-source="E:\MEGA\Construct 2\tests\Toy Box\Animations\ToyBox\CO\025.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0025.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0024.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0023.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0022.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0021.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0020.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0019.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0018.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0017.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0016.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0015.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0014.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0003.png" />
+                    <frame duration="1" hotspotX="0.501718" hotspotY="0" original-source="C:\tmp\0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\tmp\0001.png" />
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0" original-source="C:\tmp\0000.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -888,12 +887,16 @@
             </animation-folder>
         </object-type>
         <object-type name="MainMenuFill" sid="5909812704229444">
-            <plugin id="NinePatch" />
+            <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Move" sid="9634271663960736" type="boolean" />
                 <instance-variable name="MaxX" sid="2787254400349907" type="number" />
             </instance-variables>
-            <texture original-source="E:\MEGA\Construct 2\tests\TB.png" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9625555305212246" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
         </object-type>
         <object-type name="StartGame" sid="8908543663518884">
             <plugin id="Button" />

@@ -22,7 +22,7 @@
                 <action id="0" name="Spawn another object" sid="2951834890242954" type="House">
                     <param id="0" name="Object">Car</param>
                     <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">2</param>
+                    <param id="2" name="Image point">1</param>
                 </action>
             </actions>
         </event-block>
@@ -44,7 +44,7 @@
                 <action id="0" name="Spawn another object" sid="9077614174877006" type="House">
                     <param id="0" name="Object">Citizen</param>
                     <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">2</param>
+                    <param id="2" name="Image point">1</param>
                 </action>
             </actions>
         </event-block>
