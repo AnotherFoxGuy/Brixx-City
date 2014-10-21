@@ -12,7 +12,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout>MainGame</layout>
         <layout>MainMenu</layout>
-        <layout active="1">Tutorial</layout>
+        <layout>Tutorial</layout>
         <event-sheet>EMainGame</event-sheet>
         <event-sheet>ECar</event-sheet>
         <event-sheet>ECitizen</event-sheet>
@@ -20,7 +20,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>EData</event-sheet>
         <event-sheet>EArrow</event-sheet>
         <event-sheet>EToyBox</event-sheet>
-        <event-sheet>EMainMenu</event-sheet>
+        <event-sheet active="1">EMainMenu</event-sheet>
         <event-sheet>ETutorial</event-sheet>
     </open-tabs>
     <properties>
@@ -39,6 +39,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/StaticObjects/" />
         <folder expanded="1" path="object-folder/DynamicObjects/" />
         <folder expanded="1" path="object-folder/Storage/" />
+        <folder expanded="1" path="object-folder/MainMenu/" />
+        <folder expanded="1" path="object-folder/MainGame/" />
+        <folder expanded="1" path="object-folder/Tutorial/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -48,12 +51,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/WorkPlace/" />
         <folder expanded="1" path="animation-folder/Car/" />
         <folder expanded="1" path="animation-folder/Citizen/" />
-        <folder expanded="1" path="animation-folder/Arrow/" />
-        <folder expanded="1" path="animation-folder/ToyBoxPreview/" />
-        <folder expanded="1" path="animation-folder/ToyBox/" />
-        <folder expanded="1" path="animation-folder/Save/" />
-        <folder expanded="1" path="animation-folder/MainMenuFill/" />
         <folder expanded="1" path="animation-folder/AnotherGameCompany/" />
+        <folder expanded="1" path="animation-folder/MainMenuFill/" />
+        <folder expanded="1" path="animation-folder/Save/" />
+        <folder expanded="1" path="animation-folder/Arrow/" />
+        <folder expanded="1" path="animation-folder/ToyBox/" />
+        <folder expanded="1" path="animation-folder/ToyBoxPreview/" />
         <folder expanded="1" path="animation-folder/TutBox/" />
     </folders-expanded>
 </c2uistate>

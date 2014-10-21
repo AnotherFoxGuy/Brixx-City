@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EData</name>
     <events>
+        <variable constant="0" name="TextID" sid="5699727689119221" static="0" type="number">0</variable>
         <variable constant="0" name="AmountNames" sid="5569411946828151" static="0" type="number">0</variable>
         <variable constant="0" name="NameID" sid="281685971786681" static="0" type="number">0</variable>
         <event-block sid="9426515604293519">
@@ -117,6 +118,23 @@
                         </action>
                         <action id="-10" name="Add to" sid="8210899780152744" type="System">
                             <param id="0" name="Variable">NameID</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3134558009349855">
+                    <conditions>
+                        <condition id="0" name="For each node" sid="6968419167370833" type="XML">
+                            <param id="0" name="XPath">&quot;/Dictionary/TutorialText/text&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="3996530551347812" type="Dictionary">
+                            <param id="0" name="Key">&quot;TutorialText&quot;&amp;TextID</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;text()&quot;)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="7337034977260925" type="System">
+                            <param id="0" name="Variable">TextID</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>

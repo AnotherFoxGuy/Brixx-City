@@ -17,23 +17,13 @@
                     <param id="0" name="Pin to">ToyBox</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="5383766514101189" type="LoadButton">
-                    <param id="0" name="Pin to">ToyBox</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="8462729030049038" type="SaveButton">
-                    <param id="0" name="Pin to">ToyBox</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="355477737116745" type="ToyBoxPreview">
                     <param id="0" name="Pin to">ToyBox</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action id="2" name="Set visible" sid="6281197436369014" type="LoadButton">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="2" name="Set visible" sid="5624688564022233" type="SaveButton">
-                    <param id="0" name="Visibility">0</param>
+                <action behavior="Pin" id="0" name="Pin to object" sid="9217135913610902" type="SaveButton">
+                    <param id="0" name="Pin to">ToyBox</param>
+                    <param id="1" name="Mode">0</param>
                 </action>
                 <action id="3" name="Set visible" sid="6047775674294434" type="TextBoxText">
                     <param id="0" name="Visibility">0</param>
@@ -47,6 +37,9 @@
                 <action id="-9" name="Set value" sid="2263304581981496" type="System">
                     <param id="0" name="Variable">ToyBox</param>
                     <param id="1" name="Value">&quot;Closed&quot;</param>
+                </action>
+                <action id="2" name="Set visible" sid="9133085136560081" type="SaveButton">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
@@ -66,12 +59,6 @@
                     <param id="0" name="Animation">&quot;Closing&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="2" name="Set visible" sid="6839697456392808" type="LoadButton">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="2" name="Set visible" sid="9310569713237172" type="SaveButton">
-                    <param id="0" name="Visibility">0</param>
-                </action>
                 <action id="3" name="Set visible" sid="8162923504725795" type="TextBoxText">
                     <param id="0" name="Visibility">0</param>
                 </action>
@@ -79,6 +66,9 @@
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="2210883707201128" type="ToyBoxPreview">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="2" name="Set visible" sid="2866752609243673" type="SaveButton">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-9" name="Set value" sid="9559657806121183" type="System">
@@ -129,12 +119,6 @@
                     <param id="0" name="Animation">&quot;Opened&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="2" name="Set visible" sid="6122605841120168" type="LoadButton">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="2" name="Set visible" sid="4122027819333654" type="SaveButton">
-                    <param id="0" name="Visibility">1</param>
-                </action>
                 <action id="3" name="Set visible" sid="8301774623927166" type="TextBoxText">
                     <param id="0" name="Visibility">1</param>
                 </action>
@@ -142,6 +126,9 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="495001183634841" type="ToyBoxPreview">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="2" name="Set visible" sid="3924427725389786" type="SaveButton">
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="3045692178837987" type="System">

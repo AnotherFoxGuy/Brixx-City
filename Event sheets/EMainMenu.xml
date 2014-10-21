@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EMainMenu</name>
     <events>
-        <variable constant="0" name="LoadLayout" sid="8946723654057142" static="0" type="text"></variable>
+        <variable constant="0" name="LoadLayout" sid="8946723654057142" static="0" type="text">zero</variable>
         <include>ECar</include>
         <include>ECitizen</include>
         <event-block sid="341554880756883">
@@ -14,6 +14,10 @@
                 <action behavior="Pathfinding" id="5" name="Add obstacle" sid="2250072137498422" type="Citizen">
                     <param id="0" name="Obstacle">Tilemap</param>
                 </action>
+                <action id="-10" name="Set value" sid="9849219367603613" type="MainMenuFill">
+                    <param id="0" name="Instance variable">MaxX</param>
+                    <param id="1" name="Value">MainMenuFill.X</param>
+                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="7623670197693948" type="StartGame">
                     <param id="0" name="Pin to">MainMenuFill</param>
                     <param id="1" name="Mode">1</param>
@@ -22,16 +26,39 @@
                     <param id="0" name="Pin to">MainMenuFill</param>
                     <param id="1" name="Mode">1</param>
                 </action>
-                <action id="-10" name="Set value" sid="9849219367603613" type="MainMenuFill">
-                    <param id="0" name="Instance variable">MaxX</param>
-                    <param id="1" name="Value">MainMenuFill.X</param>
+                <action behavior="Pin" id="0" name="Pin to object" sid="555917859771315" type="SaveLoadList">
+                    <param id="0" name="Pin to">SaveBox</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="7864115246781946" type="LoadButton">
+                    <param id="0" name="Pin to">MainMenuFill</param>
+                    <param id="1" name="Mode">0</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="4550617998266052" type="House">
                     <param id="0" name="Object">DynamicObjects</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">1</param>
                 </action>
+                <action id="-2" name="Set Y" sid="7312904737871657" type="SaveBox">
+                    <param id="0" name="Y">MainMenuFill.Y</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block sid="3905963689614219">
+                    <conditions>
+                        <condition id="-10" name="For" sid="5232213175200576" type="System">
+                            <param id="0" name="Name">&quot;&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">WebStorage.LocalCount</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Add item" sid="7636404535655951" type="SaveLoadList">
+                            <param id="0" name="Text">WebStorage.LocalKeyAt(loopindex)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="226729693997092">
             <conditions>
@@ -136,9 +163,98 @@
                     <param id="1" name="X co-ordinate">-1500</param>
                 </condition>
             </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2143732190287113">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6413077352524996" type="System">
+                            <param id="0" name="Variable">LoadLayout</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;zero&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="9292564336704282" type="System">
+                            <param id="0" name="Layout">LoadLayout</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1715433664541711">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7753693563466944" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-37" name="Load" sid="5275038695807596" type="System">
+                            <param id="0" name="Slot">SaveLoadList.SelectedText</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6692086425672289">
+            <conditions>
+                <condition id="0" name="On clicked" sid="3297233765566952" type="LoadButton" />
+            </conditions>
             <actions>
-                <action id="-25" name="Go to layout (by name)" sid="141791783750658" type="System">
-                    <param id="0" name="Layout">LoadLayout</param>
+                <action id="-13" name="Set boolean" sid="9805959592558728" type="SaveBox">
+                    <param id="0" name="Instance variable">Move</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="9960287164402806" type="SaveLoadList">
+                    <param id="0" name="Instance variable">Save</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6707018320725002">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="1393194100598298" type="SaveBox">
+                    <param id="0" name="Instance variable">Move</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8353175785051328">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="6652921581626349" type="SaveBox">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">700</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="3023637936125281" type="SaveBox">
+                            <param id="0" name="X">SaveBox.X+40</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5134815895859105">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4021793634185227" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5969266246952746" type="SaveBox">
+                            <param id="0" name="Pin to">MainMenuFill</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="6429699131277013" type="SaveBox">
+                            <param id="0" name="Instance variable">Move</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="2" name="Set visible" sid="3693709705027469" type="SaveLoadList">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6267919055519181">
+            <conditions>
+                <condition id="3" name="On double-clicked" sid="7797522459281794" type="SaveLoadList" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="4096286838434119" type="MainMenuFill">
+                    <param id="0" name="Instance variable">Move</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

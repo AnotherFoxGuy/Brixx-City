@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ETutorial</name>
     <events>
+        <variable constant="0" name="TutBoxTextLine" sid="2656487975133672" static="0" type="number">0</variable>
         <include>EMainGame</include>
         <event-block sid="9944521593904547">
             <conditions>
@@ -31,11 +32,36 @@
         </event-block>
         <event-block sid="2665548321935929">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="9151683037217536" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
+                <condition id="0" name="On clicked" sid="2067463932194961" type="TutBoxButton" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Set text" sid="39188928935199" type="TutBoxText">
+                    <param id="0" name="Text">Dictionary.Get(&quot;TutorialText&quot;&amp;TutBoxTextLine)</param>
+                </action>
+                <action id="-10" name="Add to" sid="4712369153639913" type="System">
+                    <param id="0" name="Variable">TutBoxTextLine</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4680718769390557">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3142728628607345" type="System">
+                            <param id="0" name="Variable">TextID</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">TutBoxTextLine</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5661143179576499" type="TutBoxText">
+                            <param id="0" name="Text">&quot;This is the end&quot;</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="2182859090856609" type="TutBoxButton">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
