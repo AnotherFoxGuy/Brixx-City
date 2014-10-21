@@ -11,7 +11,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Game</layout>
-        <layout>MainMenu</layout>
+        <layout active="1">MainMenu</layout>
         <event-sheet>EGame</event-sheet>
         <event-sheet>ECar</event-sheet>
         <event-sheet>ECitizen</event-sheet>
@@ -19,7 +19,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>EData</event-sheet>
         <event-sheet>EArrow</event-sheet>
         <event-sheet>EToyBox</event-sheet>
-        <event-sheet active="1">EMainMenu</event-sheet>
+        <event-sheet>EMainMenu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
