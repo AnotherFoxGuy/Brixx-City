@@ -48,7 +48,7 @@
                     <conditions>
                         <condition id="-10" name="For" sid="5232213175200576" type="System">
                             <param id="0" name="Name">&quot;&quot;</param>
-                            <param id="1" name="Start index">1</param>
+                            <param id="1" name="Start index">0</param>
                             <param id="2" name="End index">WebStorage.LocalCount</param>
                         </condition>
                     </conditions>
@@ -255,6 +255,35 @@
                 <action id="-13" name="Set boolean" sid="4096286838434119" type="MainMenuFill">
                     <param id="0" name="Instance variable">Move</param>
                     <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4900012860133793">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="9404168496848158" type="Keyboard">
+                    <param id="0" name="Key">46 (Delete)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Remove local value" sid="9575481985794369" type="WebStorage">
+                    <param id="0" name="Key">SaveLoadList.SelectedText</param>
+                </action>
+                <action id="9" name="Remove" sid="7251892531959816" type="SaveLoadList">
+                    <param id="0" name="Index">SaveLoadList.SelectedIndex</param>
+                </action>
+                <action id="4" name="Clear local storage" sid="9157272048857603" type="WebStorage" />
+            </actions>
+        </event-block>
+        <event-block sid="9924382234648786">
+            <conditions>
+                <condition id="-30" name="On load failed" sid="3310793542536464" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7741573099600499" type="System">
+                    <param id="0" name="Layout">MainGame</param>
+                </action>
+                <action id="0" name="Alert" sid="3379283251979844" type="Browser">
+                    <param id="0" name="Message">&quot;Failed to load save!&quot;&amp;newline&amp;&quot;Starting a new game&quot;</param>
                 </action>
             </actions>
         </event-block>
