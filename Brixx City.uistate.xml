@@ -11,8 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>MainGame</layout>
-        <layout active="1">MainMenu</layout>
-        <layout>Tutorial</layout>
+        <layout>MainMenu</layout>
+        <layout active="1">Tutorial</layout>
         <event-sheet>EMainGame</event-sheet>
         <event-sheet>ECar</event-sheet>
         <event-sheet>ECitizen</event-sheet>
@@ -54,7 +54,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Thumbnail/" />
         <folder expanded="1" path="animation-folder/AnotherGameCompany/" />
         <folder expanded="1" path="animation-folder/MainMenuFill/" />
-        <folder expanded="1" path="animation-folder/Save/" />
+        <folder expanded="1" path="animation-folder/Overlay/" />
         <folder expanded="1" path="animation-folder/Arrow/" />
         <folder expanded="1" path="animation-folder/ToyBox/" />
         <folder expanded="1" path="animation-folder/ToyBoxPreview/" />

@@ -743,7 +743,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Save" sid="9907545703046794">
+            <object-type name="Overlay" sid="9907545703046794">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="DragDrop" sid="6375975637883309">

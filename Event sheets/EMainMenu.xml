@@ -69,7 +69,7 @@
                 <condition id="-1" name="Every tick" sid="6706418948734436" type="System" />
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="6418073162702126" type="Save">
+                <action id="-3" name="Set position" sid="6418073162702126" type="Overlay">
                     <param id="0" name="X">0</param>
                     <param id="1" name="Y">0</param>
                 </action>

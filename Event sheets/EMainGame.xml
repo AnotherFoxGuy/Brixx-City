@@ -9,7 +9,6 @@
         <include>EStaticObjects</include>
         <include>ECitizen</include>
         <include>ECar</include>
-        <variable constant="0" name="JSON" sid="6795378969129132" static="0" type="text">{&quot;c2tilemap&quot;:true,&quot;width&quot;:9,&quot;height&quot;:13,&quot;data&quot;:&quot;35x0,8,81x0&quot;}</variable>
         <variable constant="0" name="HouseNames" sid="9416315721467261" static="0" type="text"></variable>
         <variable constant="0" name="WorkPlaceNames" sid="6732764979401432" static="0" type="text"></variable>
         <variable constant="0" name="ExtraBuildingNames" sid="1156505903008907" static="0" type="text"></variable>
@@ -25,9 +24,6 @@
                 <condition id="-2" name="On start of layout" sid="383370852545283" type="System" />
             </conditions>
             <actions>
-                <action disabled="1" id="4" name="Load" sid="3340707959865496" type="Tilemap">
-                    <param id="0" name="JSON">JSON</param>
-                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="6142327321649819" type="SaveTextBox">
                     <param id="0" name="Pin to">SaveBox</param>
                     <param id="1" name="Mode">0</param>
