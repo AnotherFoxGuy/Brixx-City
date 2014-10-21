@@ -30,6 +30,10 @@
                     <param id="0" name="Pin to">SaveBox</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="2093621051498763" type="Thumbnail">
+                    <param id="0" name="Pin to">SaveBox</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="7864115246781946" type="LoadButton">
                     <param id="0" name="Pin to">MainMenuFill</param>
                     <param id="1" name="Mode">0</param>
@@ -249,10 +253,21 @@
         </event-block>
         <event-block sid="6267919055519181">
             <conditions>
-                <condition id="3" name="On double-clicked" sid="7797522459281794" type="SaveLoadList" />
+                <condition id="2" name="On clicked" sid="7797522459281794" type="SaveLoadList" />
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="4096286838434119" type="MainMenuFill">
+                <action id="10" name="Load image from URL" sid="9806253824468689" type="Thumbnail">
+                    <param id="0" name="URI">WebStorage.LocalValue(SaveLoadList.SelectedText)</param>
+                    <param id="1" name="Size">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9261931887379649">
+            <conditions>
+                <condition id="3" name="On double-clicked" sid="9719874816346385" type="SaveLoadList" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="5382895225476639" type="MainMenuFill">
                     <param id="0" name="Instance variable">Move</param>
                     <param id="1" name="Value">1</param>
                 </action>

@@ -40,6 +40,11 @@
         <event-block sid="5925546902118957">
             <conditions>
                 <condition id="1" name="On any click" sid="3561310982092376" type="Mouse" />
+                <condition id="-14" name="Compare variable" sid="9073706372035532" type="System">
+                    <param id="0" name="Variable">ToyBox</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Opened&quot;</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>

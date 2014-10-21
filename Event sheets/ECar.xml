@@ -104,6 +104,43 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="5035700847709721">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="7362316065384309" type="Car" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5723668128272868">
+                    <conditions>
+                        <condition id="-16" name="Pick random instance" sid="3785133019040124" type="System">
+                            <param id="0" name="Object">WorkPlace</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="8021140721774305" type="System">
+                            <param id="0" name="First value">random(2)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="6843836787031807" type="Car">
+                            <param id="0" name="X">WorkPlace.X</param>
+                            <param id="1" name="Y">WorkPlace.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3000563703732052">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9061576636318491" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="3972755439233048" type="Car">
+                            <param id="0" name="X">random(5050)</param>
+                            <param id="1" name="Y">random(2618)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="7335969536084173">
             <conditions>
                 <condition id="-1" name="Every tick" sid="4061885921583079" type="System" />

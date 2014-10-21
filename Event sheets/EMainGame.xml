@@ -67,6 +67,11 @@
         <event-block sid="1494913696269996">
             <conditions>
                 <condition id="-22" name="Else" sid="1488599296677292" type="System" />
+                <condition id="-14" name="Compare variable" sid="7949492470815304" type="System">
+                    <param id="0" name="Variable">ToyBox</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Opened&quot;</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>
@@ -91,8 +96,9 @@
                     <sub-events>
                         <event-block sid="4304186231467588">
                             <conditions>
-                                <condition id="2" name="Mouse button is down" sid="7880695247253159" type="Mouse">
+                                <condition id="0" name="On click" sid="7880695247253159" type="Mouse">
                                     <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -106,8 +112,9 @@
                         </event-block>
                         <event-block sid="6183589739964697">
                             <conditions>
-                                <condition id="2" name="Mouse button is down" sid="5999903973430544" type="Mouse">
+                                <condition id="0" name="On click" sid="5999903973430544" type="Mouse">
                                     <param id="0" name="Mouse button">2</param>
+                                    <param id="1" name="Click type">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -147,6 +154,11 @@
                 <condition id="0" name="On click" sid="6605596365114349" type="Mouse">
                     <param id="0" name="Mouse button">2</param>
                     <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5556727805593972" type="System">
+                    <param id="0" name="Variable">ToyBox</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Opened&quot;</param>
                 </condition>
             </conditions>
             <actions />
@@ -342,16 +354,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-36" name="Save" sid="6197207202699489" type="System">
-                    <param id="0" name="Slot">SaveTextBox.Text</param>
-                </action>
-                <action id="-3" name="Set position" sid="3405918878412128" type="SaveBox">
-                    <param id="0" name="X">-1000</param>
-                    <param id="1" name="Y">-1000</param>
-                </action>
-                <action id="0" name="Set local value" sid="6304268334449025" type="WebStorage">
-                    <param id="0" name="Key">SaveTextBox.Text</param>
-                    <param id="1" name="Value">SaveTextBox.Text</param>
+                <action id="0" name="Call function" sid="4735128121662757" type="Function">
+                    <param id="0" name="Name">&quot;Save&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -361,16 +366,40 @@
                 <condition id="-3" name="Is on-screen" sid="756539739731764" type="SaveTextBox" />
             </conditions>
             <actions>
-                <action id="-36" name="Save" sid="3565316084240349" type="System">
+                <action id="0" name="Call function" sid="4075771123684656" type="Function">
+                    <param id="0" name="Name">&quot;Save&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3782748201554208">
+            <conditions>
+                <condition id="0" name="On function" sid="1640719490080463" type="Function">
+                    <param id="0" name="Name">&quot;Save&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-27" name="Snapshot canvas" sid="6687178002454882" type="System">
+                    <param id="0" name="Format">1</param>
+                    <param id="1" name="JPEG quality">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1174433180044904">
+            <conditions>
+                <condition id="-26" name="On canvas snapshot" sid="9865091783801941" type="System" />
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="7131903999981559" type="System">
                     <param id="0" name="Slot">SaveTextBox.Text</param>
                 </action>
-                <action id="-3" name="Set position" sid="3329234384909444" type="SaveBox">
+                <action id="-3" name="Set position" sid="9649913402028759" type="SaveBox">
                     <param id="0" name="X">-1000</param>
                     <param id="1" name="Y">-1000</param>
                 </action>
-                <action id="0" name="Set local value" sid="9718200668817722" type="WebStorage">
+                <action id="0" name="Set local value" sid="4665176368437794" type="WebStorage">
                     <param id="0" name="Key">SaveTextBox.Text</param>
-                    <param id="1" name="Value">SaveTextBox.Text</param>
+                    <param id="1" name="Value">CanvasSnapshot</param>
                 </action>
             </actions>
         </event-block>
