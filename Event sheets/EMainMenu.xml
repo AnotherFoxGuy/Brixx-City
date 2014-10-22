@@ -154,7 +154,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="9593683750073754" type="MainMenuFill">
-                            <param id="0" name="X">MainMenuFill.X-20</param>
+                            <param id="0" name="X">MainMenuFill.X-60</param>
                         </action>
                     </actions>
                 </event-block>
@@ -164,7 +164,7 @@
             <conditions>
                 <condition id="-1" name="Compare X" sid="7441936253990126" type="MainMenuFill">
                     <param id="0" name="Comparison">2</param>
-                    <param id="1" name="X co-ordinate">-1500</param>
+                    <param id="1" name="X co-ordinate">-2500</param>
                 </condition>
             </conditions>
             <actions />
@@ -222,12 +222,12 @@
                     <conditions>
                         <condition id="-1" name="Compare X" sid="6652921581626349" type="SaveBox">
                             <param id="0" name="Comparison">3</param>
-                            <param id="1" name="X co-ordinate">700</param>
+                            <param id="1" name="X co-ordinate">1700</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="3023637936125281" type="SaveBox">
-                            <param id="0" name="X">SaveBox.X+40</param>
+                            <param id="0" name="X">SaveBox.X+80</param>
                         </action>
                     </actions>
                 </event-block>

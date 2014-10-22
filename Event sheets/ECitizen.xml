@@ -18,10 +18,6 @@
                 <condition id="-18" name="On created" sid="9440488560593208" type="Citizen" />
             </conditions>
             <actions>
-                <action id="-10" name="Add to" sid="2070419761327051" type="System">
-                    <param id="0" name="Variable">AmountofCitizenSpawnt</param>
-                    <param id="1" name="Value">1</param>
-                </action>
                 <action id="0" name="Add key" sid="2579810089595312" type="Dictionary">
                     <param id="0" name="Key">str(Citizen.UID)</param>
                     <param id="1" name="Value">Dictionary.Get(&quot;CitizenName&quot;&amp;str(House.UID))</param>
@@ -95,10 +91,6 @@
                 <condition id="-19" name="On destroyed" sid="8417840719805442" type="Citizen" />
             </conditions>
             <actions>
-                <action id="-11" name="Subtract from" sid="6745504419656497" type="System">
-                    <param id="0" name="Variable">AmountofCitizenSpawnt</param>
-                    <param id="1" name="Value">1</param>
-                </action>
                 <action id="2" name="Delete key" sid="9451485431226547" type="Dictionary">
                     <param id="0" name="Key">str(Citizen.UID)</param>
                 </action>

@@ -18,10 +18,6 @@
                 <condition id="-18" name="On created" sid="4375650502158659" type="Car" />
             </conditions>
             <actions>
-                <action id="-10" name="Add to" sid="7431097441355451" type="System">
-                    <param id="0" name="Variable">AmountofCarsSpawnt</param>
-                    <param id="1" name="Value">1</param>
-                </action>
                 <action id="0" name="Add key" sid="9697838033432715" type="Dictionary">
                     <param id="0" name="Key">str(Car.UID)</param>
                     <param id="1" name="Value">Dictionary.Get(&quot;CitizenName&quot;&amp;str(House.UID))&amp;&quot;&apos;s car&quot;</param>
@@ -95,10 +91,6 @@
                 <condition id="-19" name="On destroyed" sid="7282341004207686" type="Car" />
             </conditions>
             <actions>
-                <action id="-11" name="Subtract from" sid="1474406961449347" type="System">
-                    <param id="0" name="Variable">AmountofCarsSpawnt</param>
-                    <param id="1" name="Value">1</param>
-                </action>
                 <action id="2" name="Delete key" sid="4497142533335059" type="Dictionary">
                     <param id="0" name="Key">str(Car.UID)</param>
                 </action>

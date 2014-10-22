@@ -14,8 +14,6 @@
         <variable constant="0" name="ExtraBuildingNames" sid="1156505903008907" static="0" type="text"></variable>
         <variable constant="1" name="DIVIS" sid="9235676036127609" static="0" type="number">109</variable>
         <variable constant="0" name="MaxSpawnAmount" sid="2864446589418824" static="0" type="number">0</variable>
-        <variable constant="0" name="AmountofCitizenSpawnt" sid="9848803096169166" static="0" type="number">0</variable>
-        <variable constant="0" name="AmountofCarsSpawnt" sid="542827829967612" static="0" type="number">0</variable>
         <variable constant="0" name="LastUID" sid="7022418994006204" static="0" type="number">0</variable>
         <variable constant="1" name="TILEX" sid="3642476312808294" static="0" type="number">504</variable>
         <variable constant="1" name="TILEY" sid="5073629196901325" static="0" type="number">218</variable>
@@ -93,7 +91,7 @@
                         <event-block sid="4304186231467588">
                             <conditions>
                                 <condition id="0" name="On click" sid="7880695247253159" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="0" name="Mouse button">2</param>
                                     <param id="1" name="Click type">0</param>
                                 </condition>
                             </conditions>
@@ -102,22 +100,6 @@
                                     <param id="0" name="Tile X">floor(Mouse.X/TILEX)</param>
                                     <param id="1" name="Tile Y">floor(Mouse.Y/TILEY)</param>
                                     <param id="2" name="Tile">Objselector.SelectedIndex</param>
-                                    <param id="3" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6183589739964697">
-                            <conditions>
-                                <condition id="0" name="On click" sid="5999903973430544" type="Mouse">
-                                    <param id="0" name="Mouse button">2</param>
-                                    <param id="1" name="Click type">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set tile" sid="8087622855650611" type="Tilemap">
-                                    <param id="0" name="Tile X">floor(Mouse.X/TILEX)</param>
-                                    <param id="1" name="Tile Y">floor(Mouse.Y/TILEY)</param>
-                                    <param id="2" name="Tile">0</param>
                                     <param id="3" name="State">0</param>
                                 </action>
                             </actions>
@@ -375,6 +357,19 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-15" name="Set visible" sid="6992679507525413" type="Arrow">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="303379076450678" type="ToyBoxPreview">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5991247086472206" type="ToyBox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="1088684161117889" type="SaveBox">
+                    <param id="0" name="X">-1000</param>
+                    <param id="1" name="Y">-1000</param>
+                </action>
                 <action id="-27" name="Snapshot canvas" sid="6687178002454882" type="System">
                     <param id="0" name="Format">1</param>
                     <param id="1" name="JPEG quality">50</param>
@@ -389,13 +384,18 @@
                 <action id="-36" name="Save" sid="7131903999981559" type="System">
                     <param id="0" name="Slot">SaveTextBox.Text</param>
                 </action>
-                <action id="-3" name="Set position" sid="9649913402028759" type="SaveBox">
-                    <param id="0" name="X">-1000</param>
-                    <param id="1" name="Y">-1000</param>
-                </action>
                 <action id="0" name="Set local value" sid="4665176368437794" type="WebStorage">
                     <param id="0" name="Key">SaveTextBox.Text</param>
                     <param id="1" name="Value">CanvasSnapshot</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9479154237219722" type="ToyBox">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action disabled="1" id="-15" name="Set visible" sid="6004789481308889" type="Arrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action disabled="1" id="-15" name="Set visible" sid="548406158901671" type="ToyBoxPreview">
+                    <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>
