@@ -38,6 +38,9 @@
             <conditions>
                 <condition id="0" name="On clicked" sid="9858954663684947" type="SaveButton" />
                 <condition id="-3" name="Is on-screen" sid="1126483461724798" type="SaveTextBox" />
+                <condition id="-8" name="Is boolean instance variable set" sid="7035133863645412" type="SaveTextBox">
+                    <param id="0" name="Instance variable">Saving</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="922084667964557" type="Function">
@@ -52,12 +55,67 @@
                     <param id="0" name="Interval (seconds)">30</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="2810165453262977" type="Function">
-                    <param id="0" name="Name">&quot;Save&quot;</param>
-                    <param id="1" name="Parameter {n}">SaveTextBox.Text&amp;&quot; autosave&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="5406374205022366">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="8024434920972136" type="SaveTextBox">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2119233088137246" type="Function">
+                            <param id="0" name="Name">&quot;Save&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Unnamed autosave&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5169941201645646">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3407409319469944" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3467506796182512" type="Function">
+                            <param id="0" name="Name">&quot;Save&quot;</param>
+                            <param id="1" name="Parameter {n}">SaveTextBox.Text&amp;&quot; autosave&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6185288967616738">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="8765703243259282" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1615234114092789">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="266471236972477" type="SaveTextBox">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3166463960749051" type="Function">
+                            <param id="0" name="Name">&quot;Save&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Unnamed quit&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2432574061052243">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2499288623840402" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2261837446484404" type="Function">
+                            <param id="0" name="Name">&quot;Save&quot;</param>
+                            <param id="1" name="Parameter {n}">SaveTextBox.Text&amp;&quot; quit&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="7538722855304913">
             <conditions>
@@ -102,7 +160,7 @@
                     <param id="1" name="Value">CanvasSnapshot</param>
                 </action>
                 <action id="0" name="Set local value" sid="1039654334409871" type="WebStorage">
-                    <param id="0" name="Key">&quot;Ignore-Version-&quot;&amp;SaveName</param>
+                    <param id="0" name="Key">&quot;Version-&quot;&amp;SaveName</param>
                     <param id="1" name="Value">projectversion</param>
                 </action>
                 <action id="-15" name="Set visible" sid="9383055130933606" type="ToyBox">
