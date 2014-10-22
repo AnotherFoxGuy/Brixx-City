@@ -10,6 +10,7 @@
         <include>EStaticObjects</include>
         <include>ECitizen</include>
         <include>ECar</include>
+        <variable constant="0" name="SaveName" sid="8427501371463859" static="0" type="text">Default</variable>
         <variable constant="0" name="HouseNames" sid="9416315721467261" static="0" type="text"></variable>
         <variable constant="0" name="WorkPlaceNames" sid="6732764979401432" static="0" type="text"></variable>
         <variable constant="0" name="ExtraBuildingNames" sid="1156505903008907" static="0" type="text"></variable>
@@ -328,7 +329,7 @@
             <actions>
                 <action id="0" name="Call function" sid="4735128121662757" type="Function">
                     <param id="0" name="Name">&quot;Save&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
+                    <param id="1" name="Parameter {n}">SaveTextBox.Text</param>
                 </action>
             </actions>
         </event-block>
@@ -338,9 +339,22 @@
                 <condition id="-3" name="Is on-screen" sid="756539739731764" type="SaveTextBox" />
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="4075771123684656" type="Function">
+                <action id="0" name="Call function" sid="3404188518951958" type="Function">
                     <param id="0" name="Name">&quot;Save&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
+                    <param id="1" name="Parameter {n}">SaveTextBox.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6332989256830555">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2811687739818471" type="System">
+                    <param id="0" name="Interval (seconds)">30</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="6712915325486751" type="Function">
+                    <param id="0" name="Name">&quot;Save&quot;</param>
+                    <param id="1" name="Parameter {n}">SaveTextBox.Text&amp;&quot; autosave&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -351,6 +365,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="6938079770276836" type="System">
+                    <param id="0" name="Variable">SaveName</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                </action>
                 <action id="-15" name="Set visible" sid="6992679507525413" type="Arrow">
                     <param id="0" name="Visibility">0</param>
                 </action>
@@ -376,10 +394,10 @@
             </conditions>
             <actions>
                 <action id="-36" name="Save" sid="7131903999981559" type="System">
-                    <param id="0" name="Slot">SaveTextBox.Text</param>
+                    <param id="0" name="Slot">SaveName</param>
                 </action>
                 <action id="0" name="Set local value" sid="4665176368437794" type="WebStorage">
-                    <param id="0" name="Key">SaveTextBox.Text</param>
+                    <param id="0" name="Key">SaveName</param>
                     <param id="1" name="Value">CanvasSnapshot</param>
                 </action>
                 <action id="-15" name="Set visible" sid="9479154237219722" type="ToyBox">

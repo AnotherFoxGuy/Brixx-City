@@ -13,14 +13,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>MainGame</layout>
         <layout>MainMenu</layout>
         <layout>Tutorial</layout>
-        <event-sheet>EMainGame</event-sheet>
+        <event-sheet active="1">EMainGame</event-sheet>
         <event-sheet>ECar</event-sheet>
         <event-sheet>ECitizen</event-sheet>
         <event-sheet>EStaticObjects</event-sheet>
         <event-sheet>EData</event-sheet>
         <event-sheet>EArrow</event-sheet>
         <event-sheet>EToyBox</event-sheet>
-        <event-sheet active="1">EMainMenu</event-sheet>
+        <event-sheet>EMainMenu</event-sheet>
         <event-sheet>ETutorial</event-sheet>
         <event-sheet>EMouse</event-sheet>
     </open-tabs>
