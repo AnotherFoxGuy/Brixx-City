@@ -507,7 +507,7 @@
                         <id-optional></id-optional>
                     </properties>
                     <instance-variables>
-                        <Save>false</Save>
+                        <Load>false</Load>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />

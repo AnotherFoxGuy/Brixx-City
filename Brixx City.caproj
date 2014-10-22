@@ -686,7 +686,7 @@
             <object-type name="SaveLoadList" sid="5803632923693206">
                 <plugin id="List" />
                 <instance-variables>
-                    <instance-variable name="Save" sid="1843958821457079" type="boolean" />
+                    <instance-variable name="Load" sid="1843958821457079" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="900403295638146">

@@ -245,14 +245,50 @@
             <conditions>
                 <condition id="0" name="On clicked" sid="3297233765566952" type="LoadButton" />
             </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9134486888713499">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="4488874614585875" type="SaveLoadList">
+                            <param id="0" name="Instance variable">Load</param>
+                        </condition>
+                        <condition id="0" name="Compare selection" sid="5813776380455882" type="SaveLoadList">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Index">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9731039071924596" type="Function">
+                            <param id="0" name="Name">&quot;Load&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1462083838115116">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7439734234027593" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="5356718563442889" type="SaveBox">
+                            <param id="0" name="Instance variable">Move</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8346758405130577" type="SaveLoadList">
+                            <param id="0" name="Instance variable">Load</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="9261931887379649">
+            <conditions>
+                <condition id="3" name="On double-clicked" sid="9719874816346385" type="SaveLoadList" />
+            </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="9805959592558728" type="SaveBox">
-                    <param id="0" name="Instance variable">Move</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="9960287164402806" type="SaveLoadList">
-                    <param id="0" name="Instance variable">Save</param>
-                    <param id="1" name="Value">0</param>
+                <action id="0" name="Call function" sid="7689698312401788" type="Function">
+                    <param id="0" name="Name">&quot;Load&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -308,33 +344,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="9261931887379649">
-            <conditions>
-                <condition id="3" name="On double-clicked" sid="9719874816346385" type="SaveLoadList" />
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="5382895225476639" type="MainMenuFill">
-                    <param id="0" name="Instance variable">Move</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="8129757030989119">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="1339298559790656" type="System">
-                            <param id="0" name="First value">WebStorage.LocalValue(&quot;Ignore-Version-&quot;&amp;SaveLoadList.SelectedText)</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">projectversion</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="0" name="Alert" sid="2211831245531794" type="Browser">
-                            <param id="0" name="Message">&quot;old save!&quot;&amp;newline&amp;&quot;Starting a new game&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="9924382234648786">
             <conditions>
                 <condition id="-30" name="On load failed" sid="3310793542536464" type="System" />
@@ -372,6 +381,35 @@
             <actions>
                 <action disabled="1" id="4" name="Clear local storage" sid="2014737097159954" type="WebStorage" />
             </actions>
+        </event-block>
+        <event-block sid="4558358181923832">
+            <conditions>
+                <condition id="0" name="On function" sid="5763327305861221" type="Function">
+                    <param id="0" name="Name">&quot;Load&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="5382895225476639" type="MainMenuFill">
+                    <param id="0" name="Instance variable">Move</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9889419536761147">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="8798308031551389" type="System">
+                            <param id="0" name="First value">WebStorage.LocalValue(&quot;Ignore-Version-&quot;&amp;SaveLoadList.SelectedText)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">projectversion</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Alert" sid="9759634672030639" type="Browser">
+                            <param id="0" name="Message">&quot;old save!&quot;&amp;newline&amp;&quot;Starting a new game&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
