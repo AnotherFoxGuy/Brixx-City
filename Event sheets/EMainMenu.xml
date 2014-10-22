@@ -6,6 +6,28 @@
         <variable constant="0" name="LoadLayout" sid="8946723654057142" static="0" type="text">zero</variable>
         <include>ECar</include>
         <include>ECitizen</include>
+        <event-block sid="6289458735320065">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7301597854338877" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5336322793367">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="4450469618825075" type="System">
+                            <param id="0" name="Object">Objects</param>
+                            <param id="1" name="Expression">Objects.Y</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="5914229708685663" type="Objects" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="341554880756883">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="6693927671896533" type="System" />
@@ -60,6 +82,18 @@
                         <action id="7" name="Add item" sid="7636404535655951" type="SaveLoadList">
                             <param id="0" name="Text">WebStorage.LocalKeyAt(loopindex)</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3944111286321142">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="8916199985968273" type="System">
+                            <param id="0" name="Object">Objects</param>
+                            <param id="1" name="Expression">Objects.Y</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="4869056254897119" type="Objects" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -300,28 +334,6 @@
                     <param id="0" name="Message">&quot;Failed to load save!&quot;&amp;newline&amp;&quot;Starting a new game&quot;</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="6160512860496129">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="403811777955842" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="9475848050141687">
-                    <conditions>
-                        <condition id="-24" name="For Each (ordered)" sid="649517929349331" type="System">
-                            <param id="0" name="Object">Objects</param>
-                            <param id="1" name="Expression">Objects.Y</param>
-                            <param id="2" name="Order">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-24" name="Move to top" sid="5686615607446328" type="Objects" />
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
