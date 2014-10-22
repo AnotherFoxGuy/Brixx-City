@@ -78,11 +78,23 @@
                             <param id="2" name="End index">WebStorage.LocalCount</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="7" name="Add item" sid="7636404535655951" type="SaveLoadList">
-                            <param id="0" name="Text">WebStorage.LocalKeyAt(loopindex)</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7633137958359677">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="6354962618425277" type="System">
+                                    <param id="0" name="First value">find(WebStorage.LocalKeyAt(loopindex), &quot;SaveName&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Add item" sid="5274459712602039" type="SaveLoadList">
+                                    <param id="0" name="Text">replace(WebStorage.LocalKeyAt(loopindex),&quot;SaveName&quot;,&quot;&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="3944111286321142">
                     <conditions>
@@ -291,7 +303,7 @@
             </conditions>
             <actions>
                 <action id="10" name="Load image from URL" sid="9806253824468689" type="Thumbnail">
-                    <param id="0" name="URI">WebStorage.LocalValue(SaveLoadList.SelectedText)</param>
+                    <param id="0" name="URI">WebStorage.LocalValue(&quot;SaveName &quot;&amp;SaveLoadList.SelectedText)</param>
                     <param id="1" name="Size">1</param>
                 </action>
             </actions>
@@ -306,21 +318,22 @@
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="4900012860133793">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="9404168496848158" type="Keyboard">
-                    <param id="0" name="Key">46 (Delete)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="2" name="Remove local value" sid="9575481985794369" type="WebStorage">
-                    <param id="0" name="Key">SaveLoadList.SelectedText</param>
-                </action>
-                <action id="9" name="Remove" sid="7251892531959816" type="SaveLoadList">
-                    <param id="0" name="Index">SaveLoadList.SelectedIndex</param>
-                </action>
-            </actions>
+            <sub-events>
+                <event-block sid="8129757030989119">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1339298559790656" type="System">
+                            <param id="0" name="First value">WebStorage.LocalValue(&quot;Ignore-Version-&quot;&amp;SaveLoadList.SelectedText)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">projectversion</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Alert" sid="2211831245531794" type="Browser">
+                            <param id="0" name="Message">&quot;old save!&quot;&amp;newline&amp;&quot;Starting a new game&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="9924382234648786">
             <conditions>
@@ -348,6 +361,16 @@
                     <param id="0" name="URL">&quot;https://github.com/AnotherFoxGuy/Brixx-City&quot;</param>
                     <param id="1" name="Tag">&quot;github&quot;</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="1209620212527969">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="369933524387605" type="Keyboard">
+                    <param id="0" name="Key">46 (Delete)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="4" name="Clear local storage" sid="2014737097159954" type="WebStorage" />
             </actions>
         </event-block>
     </events>

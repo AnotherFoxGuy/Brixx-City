@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ESaveLoad</name>
+    <events>
+        <event-block sid="9254469157406367">
+            <conditions>
+                <condition id="0" name="On clicked" sid="594673357900157" type="SaveButton" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="3327156555757735" type="SaveBox">
+                    <param id="0" name="Object">ToyBox</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="4898651473838772" type="SaveTextBox">
+                    <param id="0" name="Instance variable">Saving</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8565301531981601">
+            <conditions>
+                <condition id="4" name="On key code pressed" sid="6203520611143776" type="Keyboard">
+                    <param id="0" name="Keycode">13</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="3752399911571082" type="SaveTextBox">
+                    <param id="0" name="Instance variable">Saving</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="2864418821597307" type="Function">
+                    <param id="0" name="Name">&quot;Save&quot;</param>
+                    <param id="1" name="Parameter {n}">SaveTextBox.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5832289347985521">
+            <conditions>
+                <condition id="0" name="On clicked" sid="9858954663684947" type="SaveButton" />
+                <condition id="-3" name="Is on-screen" sid="1126483461724798" type="SaveTextBox" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="922084667964557" type="Function">
+                    <param id="0" name="Name">&quot;Save&quot;</param>
+                    <param id="1" name="Parameter {n}">SaveTextBox.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8525695968276112">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="9733412286703571" type="System">
+                    <param id="0" name="Interval (seconds)">30</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="2810165453262977" type="Function">
+                    <param id="0" name="Name">&quot;Save&quot;</param>
+                    <param id="1" name="Parameter {n}">SaveTextBox.Text&amp;&quot; autosave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7538722855304913">
+            <conditions>
+                <condition id="0" name="On function" sid="291677257988719" type="Function">
+                    <param id="0" name="Name">&quot;Save&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5132243863210102" type="System">
+                    <param id="0" name="Variable">SaveName</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7847747976168285" type="Arrow">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="640974366323793" type="ToyBoxPreview">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5732927785312975" type="ToyBox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="5282935705628984" type="SaveBox">
+                    <param id="0" name="X">-1000</param>
+                    <param id="1" name="Y">-1000</param>
+                </action>
+                <action id="-27" name="Snapshot canvas" sid="1428757932327275" type="System">
+                    <param id="0" name="Format">1</param>
+                    <param id="1" name="JPEG quality">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6856206652583007">
+            <conditions>
+                <condition id="-26" name="On canvas snapshot" sid="8234704734521141" type="System" />
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="5884586555090816" type="System">
+                    <param id="0" name="Slot">SaveName</param>
+                </action>
+                <action id="0" name="Set local value" sid="4319001205766969" type="WebStorage">
+                    <param id="0" name="Key">&quot;SaveName &quot;&amp;SaveName</param>
+                    <param id="1" name="Value">CanvasSnapshot</param>
+                </action>
+                <action id="0" name="Set local value" sid="1039654334409871" type="WebStorage">
+                    <param id="0" name="Key">&quot;Ignore-Version-&quot;&amp;SaveName</param>
+                    <param id="1" name="Value">projectversion</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9383055130933606" type="ToyBox">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
