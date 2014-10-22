@@ -942,7 +942,7 @@
                     </animation>
                     <animation framecount="1" loop="0" name="Opened" pingpong="0" repeatcount="1" repeatto="0" sid="741679620349109" speed="5">
                         <frame duration="1" hotspotX="0.50165" hotspotY="0" original-source="C:\tmp\0000.png">
-                            <image-point name="Imagepoint 1" x="1.21452" y="0.0825472" />
+                            <image-point name="Imagepoint 1" x="0.039604" y="1.03774" />
                         </frame>
                     </animation>
                     <animation framecount="26" loop="0" name="Opening" pingpong="0" repeatcount="1" repeatto="0" sid="417337938593569" speed="20">
