@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EMainGame</name>
     <events>
+        <include>EMouse</include>
         <include>EToyBox</include>
         <include>EArrow</include>
         <include>EData</include>

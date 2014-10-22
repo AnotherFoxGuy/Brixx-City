@@ -1105,7 +1105,7 @@
         <event-sheet>EToyBox.xml</event-sheet>
         <event-sheet>EMainMenu.xml</event-sheet>
         <event-sheet>ETutorial.xml</event-sheet>
-        <event-sheet>ESaveLoad.xml</event-sheet>
+        <event-sheet>EMouse.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="3" />
