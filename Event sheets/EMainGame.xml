@@ -13,7 +13,6 @@
         <variable constant="0" name="WorkPlaceNames" sid="6732764979401432" static="0" type="text"></variable>
         <variable constant="0" name="ExtraBuildingNames" sid="1156505903008907" static="0" type="text"></variable>
         <variable constant="1" name="DIVIS" sid="9235676036127609" static="0" type="number">109</variable>
-        <variable constant="0" name="MaxSpawnAmount" sid="2864446589418824" static="0" type="number">0</variable>
         <variable constant="0" name="LastUID" sid="7022418994006204" static="0" type="number">0</variable>
         <variable constant="1" name="TILEX" sid="3642476312808294" static="0" type="number">504</variable>
         <variable constant="1" name="TILEY" sid="5073629196901325" static="0" type="number">218</variable>
@@ -50,17 +49,11 @@
                 <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="4594121475836565" type="Citizen" />
             </actions>
         </event-block>
-        <event-block sid="532828355179087">
-            <conditions>
-                <condition id="7" name="Cursor is over object" sid="244556230927933" type="Mouse">
-                    <param id="0" name="Object">ToyBox</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
         <event-block sid="1494913696269996">
             <conditions>
-                <condition id="-22" name="Else" sid="1488599296677292" type="System" />
+                <condition id="7" inverted="1" name="Cursor is over object" sid="244556230927933" type="Mouse">
+                    <param id="0" name="Object">ToyBox</param>
+                </condition>
                 <condition id="-14" name="Compare variable" sid="7949492470815304" type="System">
                     <param id="0" name="Variable">ToyBox</param>
                     <param id="1" name="Comparison">0</param>
@@ -389,12 +382,6 @@
                     <param id="1" name="Value">CanvasSnapshot</param>
                 </action>
                 <action id="-15" name="Set visible" sid="9479154237219722" type="ToyBox">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action disabled="1" id="-15" name="Set visible" sid="6004789481308889" type="Arrow">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action disabled="1" id="-15" name="Set visible" sid="548406158901671" type="ToyBoxPreview">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>

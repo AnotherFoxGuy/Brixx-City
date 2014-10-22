@@ -3,13 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EMainMenu</name>
     <events>
-        <variable constant="0" name="LoadLayout" sid="8946723654057142" static="0" type="text">zero</variable>
+        <variable constant="0" name="LoadLayout" sid="8946723654057142" static="0" type="text">Save</variable>
         <include>ECar</include>
         <include>ECitizen</include>
         <event-block sid="6289458735320065">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="7301597854338877" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
+                    <param id="0" name="Interval (seconds)">0.5</param>
                 </condition>
             </conditions>
             <actions />
@@ -207,13 +207,13 @@
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="6413077352524996" type="System">
                             <param id="0" name="Variable">LoadLayout</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Value">&quot;zero&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Save&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-25" name="Go to layout (by name)" sid="9292564336704282" type="System">
-                            <param id="0" name="Layout">LoadLayout</param>
+                        <action id="-37" name="Load" sid="5275038695807596" type="System">
+                            <param id="0" name="Slot">SaveLoadList.SelectedText</param>
                         </action>
                     </actions>
                 </event-block>
@@ -222,8 +222,8 @@
                         <condition id="-22" name="Else" sid="7753693563466944" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-37" name="Load" sid="5275038695807596" type="System">
-                            <param id="0" name="Slot">SaveLoadList.SelectedText</param>
+                        <action id="-25" name="Go to layout (by name)" sid="9292564336704282" type="System">
+                            <param id="0" name="Layout">LoadLayout</param>
                         </action>
                     </actions>
                 </event-block>
@@ -332,6 +332,21 @@
                 </action>
                 <action id="0" name="Alert" sid="3379283251979844" type="Browser">
                     <param id="0" name="Message">&quot;Failed to load save!&quot;&amp;newline&amp;&quot;Starting a new game&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5483231333446964">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4897410978651452" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">AnotherGameCompany</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="45234709457069" type="Browser">
+                    <param id="0" name="URL">&quot;https://github.com/AnotherFoxGuy/Brixx-City&quot;</param>
+                    <param id="1" name="Tag">&quot;github&quot;</param>
                 </action>
             </actions>
         </event-block>

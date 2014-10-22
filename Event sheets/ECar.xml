@@ -86,16 +86,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="115285640409543">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="7282341004207686" type="Car" />
-            </conditions>
-            <actions>
-                <action id="2" name="Delete key" sid="4497142533335059" type="Dictionary">
-                    <param id="0" name="Key">str(Car.UID)</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="5035700847709721">
             <conditions>
                 <condition behavior="DragDrop" id="2" name="On drop" sid="7362316065384309" type="Car" />

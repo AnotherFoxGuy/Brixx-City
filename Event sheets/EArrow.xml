@@ -21,15 +21,9 @@
         </event-block>
         <event-block sid="9447893603152533">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="7556279033977446" type="Arrow">
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="7556279033977446" type="Arrow">
                     <param id="0" name="Object">Objects</param>
                 </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="6398490611958633">
-            <conditions>
-                <condition id="-22" name="Else" sid="3035459503976388" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="4461340147657977" type="Arrow">
@@ -40,6 +34,9 @@
         <event-block sid="5925546902118957">
             <conditions>
                 <condition id="1" name="On any click" sid="3561310982092376" type="Mouse" />
+                <condition id="7" inverted="1" name="Cursor is over object" sid="8025068752158487" type="Mouse">
+                    <param id="0" name="Object">ToyBox</param>
+                </condition>
                 <condition id="-14" name="Compare variable" sid="9073706372035532" type="System">
                     <param id="0" name="Variable">ToyBox</param>
                     <param id="1" name="Comparison">0</param>
@@ -133,6 +130,18 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="3041835723630395">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5598348195014324" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">ToyBox</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Move to bottom" sid="6911135420919022" type="Arrow" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

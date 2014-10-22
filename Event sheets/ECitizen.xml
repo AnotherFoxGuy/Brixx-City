@@ -61,6 +61,10 @@
             </conditions>
             <actions>
                 <action behavior="Pathfinding" id="1" name="Move along path" sid="153051293696066" type="Citizen" />
+                <action id="-13" name="Set boolean" sid="6586228676564198" type="Citizen">
+                    <param id="0" name="Instance variable">failedToFindPath</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9150520359880375">
@@ -83,16 +87,6 @@
                 <action id="-11" name="Add to" sid="2992901829250806" type="Citizen">
                     <param id="0" name="Instance variable">TimesFailedToFindPath</param>
                     <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="4143933291640214">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="8417840719805442" type="Citizen" />
-            </conditions>
-            <actions>
-                <action id="2" name="Delete key" sid="9451485431226547" type="Dictionary">
-                    <param id="0" name="Key">str(Citizen.UID)</param>
                 </action>
             </actions>
         </event-block>
@@ -142,11 +136,70 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="7970080376653866">
+                <event-block sid="7980344439584007">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="139981806924129" type="Citizen">
+                        <condition id="-8" name="Is boolean instance variable set" sid="5261415745956072" type="Citizen">
                             <param id="0" name="Instance variable">failedToFindPath</param>
                         </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3729553469053069" type="Citizen">
+                            <param id="0" name="Animation">&quot;Ang&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4602379563818352">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="615461989216999" type="System">
+                                    <param id="0" name="Interval (seconds)">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4284235859669043">
+                                    <conditions>
+                                        <condition id="-16" name="Pick random instance" sid="5137050622997421" type="System">
+                                            <param id="0" name="Object">WorkPlace</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pathfinding" id="0" name="Find path" sid="3868910364523416" type="Citizen">
+                                            <param id="0" name="X">WorkPlace.X</param>
+                                            <param id="1" name="Y">WorkPlace.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3855190048952354">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2579809693148012" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pathfinding" id="0" name="Find path" sid="4083187331541922" type="Citizen">
+                                            <param id="0" name="X">random(1708)</param>
+                                            <param id="1" name="Y">random(960)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="550673133301301">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6990817590137606" type="Citizen">
+                                    <param id="0" name="Instance variable">TimesFailedToFindPath</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="1054434183825302" type="Citizen" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7970080376653866">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2848431950841695" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
@@ -223,75 +276,6 @@
                                     <param id="0" name="Animation">&quot;R&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="7980344439584007">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="5261415745956072" type="Citizen">
-                            <param id="0" name="Instance variable">failedToFindPath</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="3729553469053069" type="Citizen">
-                            <param id="0" name="Animation">&quot;Ang&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="4602379563818352">
-                            <conditions>
-                                <condition id="-6" name="Every X seconds" sid="615461989216999" type="System">
-                                    <param id="0" name="Interval (seconds)">1</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="4284235859669043">
-                                    <conditions>
-                                        <condition id="-16" name="Pick random instance" sid="5137050622997421" type="System">
-                                            <param id="0" name="Object">WorkPlace</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="3868910364523416" type="Citizen">
-                                            <param id="0" name="X">WorkPlace.X</param>
-                                            <param id="1" name="Y">WorkPlace.Y</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="9968425750345982" type="Citizen">
-                                            <param id="0" name="Instance variable">failedToFindPath</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3855190048952354">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="2579809693148012" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="4083187331541922" type="Citizen">
-                                            <param id="0" name="X">random(1708)</param>
-                                            <param id="1" name="Y">random(960)</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="195544313996537" type="Citizen">
-                                            <param id="0" name="Instance variable">failedToFindPath</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="550673133301301">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="6990817590137606" type="Citizen">
-                                    <param id="0" name="Instance variable">TimesFailedToFindPath</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">10</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="1054434183825302" type="Citizen" />
                             </actions>
                         </event-block>
                     </sub-events>

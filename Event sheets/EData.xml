@@ -152,5 +152,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="8968230622800065">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="24891873286046" type="Objects" />
+            </conditions>
+            <actions>
+                <action id="2" name="Delete key" sid="7427208299048401" type="Dictionary">
+                    <param id="0" name="Key">str(Objects.UID)</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

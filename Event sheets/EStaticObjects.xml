@@ -9,7 +9,7 @@
                 <condition id="-8" name="Compare two values" sid="1390048445452597" type="System">
                     <param id="0" name="First value">Car.Count</param>
                     <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">MaxSpawnAmount</param>
+                    <param id="2" name="Second value">House.Count</param>
                 </condition>
                 <condition id="-16" name="Pick random instance" sid="5553415245979329" type="System">
                     <param id="0" name="Object">House</param>
@@ -31,7 +31,7 @@
                 <condition id="-8" name="Compare two values" sid="5032629266844244" type="System">
                     <param id="0" name="First value">Citizen.Count</param>
                     <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">MaxSpawnAmount</param>
+                    <param id="2" name="Second value">House.Count</param>
                 </condition>
                 <condition id="-16" name="Pick random instance" sid="671603345150744" type="System">
                     <param id="0" name="Object">House</param>
@@ -56,10 +56,6 @@
                 <action id="-9" name="Set value" sid="6782582944033804" type="System">
                     <param id="0" name="Variable">RandomNumber</param>
                     <param id="1" name="Value">floor(random(AmountNames))</param>
-                </action>
-                <action id="-10" name="Add to" sid="6821707021108958" type="System">
-                    <param id="0" name="Variable">MaxSpawnAmount</param>
-                    <param id="1" name="Value">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="7147283594022239" type="House">
                     <param id="0" name="Animation">Dictionary.Get(Objselector.SelectedText)&#x0D;&#x0A;</param>
@@ -101,17 +97,6 @@
                 </action>
                 <action id="-16" name="Set opacity" sid="2142662221444837" type="House">
                     <param id="0" name="Opacity">100</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3520737232275632">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="1476153229396089" type="House" />
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="8284677799078854" type="System">
-                    <param id="0" name="Variable">MaxSpawnAmount</param>
-                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
