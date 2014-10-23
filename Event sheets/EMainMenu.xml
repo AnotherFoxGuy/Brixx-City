@@ -48,16 +48,20 @@
                     <param id="0" name="Pin to">MainMenuFill</param>
                     <param id="1" name="Mode">1</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="3103834608443859" type="Settings">
+                    <param id="0" name="Pin to">MainMenuFill</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="7864115246781946" type="LoadButton">
+                    <param id="0" name="Pin to">MainMenuFill</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="555917859771315" type="SaveLoadList">
                     <param id="0" name="Pin to">SaveBox</param>
                     <param id="1" name="Mode">0</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="2093621051498763" type="Thumbnail">
                     <param id="0" name="Pin to">SaveBox</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="7864115246781946" type="LoadButton">
-                    <param id="0" name="Pin to">MainMenuFill</param>
                     <param id="1" name="Mode">0</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="4550617998266052" type="House">

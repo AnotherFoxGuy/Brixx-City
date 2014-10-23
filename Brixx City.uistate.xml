@@ -22,6 +22,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet active="1">EMainMenu</event-sheet>
         <event-sheet>EMouse</event-sheet>
         <event-sheet>ESaveLoad</event-sheet>
+        <event-sheet>ESettings </event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -52,10 +53,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/WorkPlace/" />
         <folder expanded="1" path="animation-folder/Car/" />
         <folder expanded="1" path="animation-folder/Citizen/" />
-        <folder expanded="1" path="animation-folder/Thumbnail/" />
         <folder expanded="1" path="animation-folder/AnotherGameCompany/" />
         <folder expanded="1" path="animation-folder/MainMenuFill/" />
         <folder expanded="1" path="animation-folder/Overlay/" />
+        <folder expanded="1" path="animation-folder/Thumbnail/" />
         <folder expanded="1" path="animation-folder/Arrow/" />
         <folder expanded="1" path="animation-folder/ToyBox/" />
         <folder expanded="1" path="animation-folder/ToyBoxPreview/" />

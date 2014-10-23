@@ -626,14 +626,6 @@
             <object-type global="1" name="Dictionary" sid="893043297037444">
                 <plugin id="Dictionary" />
             </object-type>
-            <object-type name="LoadButton" sid="8192467439330039">
-                <plugin id="Button" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="6049863024614355">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-            </object-type>
             <object-type name="SaveButton" sid="5113541704087092">
                 <plugin id="Button" />
                 <behaviors>
@@ -670,19 +662,6 @@
             <object-type name="Browser" sid="8806512966439282">
                 <plugin id="Browser" />
             </object-type>
-            <object-type name="SaveBox" sid="3489281903129226">
-                <plugin id="NinePatch" />
-                <instance-variables>
-                    <instance-variable name="Move" sid="750804835374385" type="boolean" />
-                    <instance-variable name="MaxX" sid="3935571889122187" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Pin" sid="3064360734884052">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <texture original-source="C:\tmp\0003.png" />
-            </object-type>
             <object-type name="SaveLoadList" sid="5803632923693206">
                 <plugin id="List" />
                 <instance-variables>
@@ -704,19 +683,6 @@
                         <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
-            </object-type>
-            <object-type name="Thumbnail" sid="9511229166867288">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="3897066777490721">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2516694268545692" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="MainMenu">
@@ -775,6 +741,61 @@
                 <plugin id="Button" />
                 <behaviors>
                     <behavior-type name="Pin" sid="7780193384235004">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="SaveBox" sid="3489281903129226">
+                <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="Move" sid="750804835374385" type="boolean" />
+                    <instance-variable name="MaxX" sid="3935571889122187" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="3064360734884052">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\tmp\0003.png" />
+            </object-type>
+            <object-type name="LoadButton" sid="8192467439330039">
+                <plugin id="Button" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="6049863024614355">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Thumbnail" sid="9511229166867288">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="3897066777490721">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2516694268545692" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SettingsBox" sid="6096416831591866">
+                <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="Move" sid="9829128096696767" type="boolean" />
+                    <instance-variable name="MaxX" sid="1953063127944561" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="588632082739079">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\tmp\0003.png" />
+            </object-type>
+            <object-type name="Settings" sid="4632402597369037">
+                <plugin id="Button" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="2623674937858071">
                         <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
@@ -1065,6 +1086,9 @@
                 <plugin id="Mouse" />
             </object-type>
         </object-folder>
+        <object-type name="Text" sid="2914475538130604">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="DynamicObjects" plugin-id="Sprite" sid="4472858150845631">
@@ -1107,6 +1131,7 @@
         <event-sheet>ETutorial.xml</event-sheet>
         <event-sheet>EMouse.xml</event-sheet>
         <event-sheet>ESaveLoad.xml</event-sheet>
+        <event-sheet>ESettings .xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="3" />
