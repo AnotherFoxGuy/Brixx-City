@@ -2,10 +2,10 @@
 <c2project>
     <name>Brixx City</name>
     <description></description>
-    <version>0.0.1.0</version>
-    <author></author>
+    <version>0.0.2.0</version>
+    <author>Edgar</author>
     <author-email></author-email>
-    <author-website>http://</author-website>
+    <author-website>https://github.com/AnotherFoxGuy/Brixx-City</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>59jlnhzfyyw0</unique-id>
     <saved-with-version>18400</saved-with-version>
@@ -48,7 +48,7 @@
     <first-layout>MainMenu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
-        <prop name="Clear background">Yes</prop>
+        <prop name="Clear background">No</prop>
         <prop name="Downscaling">High quality</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Scale inner</prop>
@@ -779,26 +779,8 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="SettingsBox" sid="6096416831591866">
-                <plugin id="NinePatch" />
-                <instance-variables>
-                    <instance-variable name="Move" sid="9829128096696767" type="boolean" />
-                    <instance-variable name="MaxX" sid="1953063127944561" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Pin" sid="588632082739079">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <texture original-source="C:\tmp\0003.png" />
-            </object-type>
-            <object-type name="Settings" sid="4632402597369037">
-                <plugin id="Button" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="2623674937858071">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
+            <object-type name="BrixxCity" sid="2914475538130604">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder name="MainGame">
@@ -1086,9 +1068,29 @@
                 <plugin id="Mouse" />
             </object-type>
         </object-folder>
-        <object-type name="Text" sid="2914475538130604">
-            <plugin id="Text" />
-        </object-type>
+        <object-folder name="Settings">
+            <object-type name="Settings" sid="4632402597369037">
+                <plugin id="Button" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="2623674937858071">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="SettingsBox" sid="6096416831591866">
+                <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="Move" sid="9829128096696767" type="boolean" />
+                    <instance-variable name="MaxX" sid="1953063127944561" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="588632082739079">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\tmp\0003.png" />
+            </object-type>
+        </object-folder>
     </object-folder>
     <families>
         <family name="DynamicObjects" plugin-id="Sprite" sid="4472858150845631">
